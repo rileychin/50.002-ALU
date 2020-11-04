@@ -32,7 +32,7 @@ module input_module (
   
   // b00 = 0
   // b01 = 1
-  counter slowclock(#SIZE(1),#DIV(26), .clk(clk), .rst(rst));
+  counter slowclock(#SIZE(1),#DIV(27), .clk(clk), .rst(rst));
   .clk(clk) {
     .rst(rst) {
       dff stored_alufn[6](#INIT(0));
@@ -40,7 +40,7 @@ module input_module (
       dff stored_a[16](#INIT(0));
       dff stored_b[16](#INIT(0));
       fsm brain= {ENTER_A, ENTER_B, ENTER_ALUFN, PROCESSING};
-      fsm alufn_op(.clk(slowclock.value), .rst(rst)) = {A_ADD,A_SUB,A_MUL,B_A,B_XOR,B_OR,B_AND,B_NOTA,B_B,B_NOTB,S_SHL,S_SHR,S_SRA,C_CMPEQ,C_CMPLT,C_CMPLE,E_ERROR};
+      fsm alufn_op(.clk(slowclock.value), .rst(rst)) = {A_ADD,A_SUB,A_MUL,B_A,B_XOR,B_OR,B_AND,B_NOTA,B_B,B_NOTB,B_NAND,B_NOR,B_XNOR,S_SHL,S_SHR,S_SRA,C_CMPEQ,C_CMPLT,C_CMPLE,E_ERROR};
       fsm switch_tester = {MANUAL,AUTO,ERROR};
       }
     
@@ -48,11 +48,13 @@ module input_module (
   }
 
   always {
+  //initialize all variables to 0
     state = b00;
     error_state = b0;
     a = b0;
     b = b0;
     alufn = b0;
+    //mux input which changes state of ALU 
     if(btn_input_1){
       switch_tester.d = switch_tester.AUTO;
       alufn_op.d = alufn_op.A_ADD;
@@ -101,6 +103,9 @@ module input_module (
       a = stored_a.q;
       b = stored_b.q;
       alufn = stored_alufn.q;
+        
+        
+        
      //auto switch_tester
       switch_tester.AUTO:
       error_state = b0;
@@ -146,6 +151,18 @@ module input_module (
               
             alufn_op.B_NOTB:
             stored_alufn_auto.d = b010011;
+              alufn_op.d = alufn_op.B_NAND;
+            
+            alufn_op.B_NAND:
+            stored_alufn_auto.d = b010111;
+              alufn_op.d = alufn_op.B_NOR;
+            
+            alufn_op.B_NOR:
+            stored_alufn_auto.d = b010001;
+              alufn_op.d = alufn_op.B_XNOR;
+            
+            alufn_op.B_XNOR:
+            stored_alufn_auto.d = b011001;
               alufn_op.d = alufn_op.S_SHL;
               
             alufn_op.S_SHL:

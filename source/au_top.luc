@@ -12,7 +12,7 @@ module au_top (
     input io_dip [3][8]     // DIP switches on IO Shield
   ) {
   
-  sig rst, error, force_out[16];                  // reset signal
+  sig rst, force_out[16], zed[8], ved[8],ned[8];                  // reset signal
   
   sixteen_bit_adder alu_adder;
   sixteen_bit_boolean alu_boole;
@@ -70,9 +70,7 @@ module au_top (
     
     //INITIALIZE 7 SEG BITS DEFAULT ALL TO empty 
     seg.values = {8h10,8h10,8h10,8h10};
-    
-    // INITIALIZE ERROR BIT
-    error = b0;
+   
     
     //INITIALIZE force_out bit;
     force_out = 16b0000000000000000;
@@ -133,8 +131,8 @@ module au_top (
                  
       b01:  // boole
       
-        // "A" (LDR): 011010; XOR: 010110; OR: 011110; AND: 011000 NOTA:010101 B:011100 NOTB: 010011
-        if (in.alufn[3:0] == b1010 || in.alufn[3:0] == b0110 || in.alufn[3:0] == b1110 || in.alufn[3:0] == b1000 || in.alufn[3:0] == b0101||in.alufn[3:0] == b1100 || in.alufn[3:0] == b0011) {
+        // "A" (LDR): 011010; XOR: 010110; OR: 011110; AND: 011000 NOTA:010101 B:011100 NOTB: 010011 NAND: 010111 NOR: 010001 XNOR: 011001
+        if (in.alufn[3:0] == b1010 || in.alufn[3:0] == b0110 || in.alufn[3:0] == b1110 || in.alufn[3:0] == b1000 || in.alufn[3:0] == b0101||in.alufn[3:0] == b1100 || in.alufn[3:0] == b0011 || in.alufn[3:0] == b0111 || in.alufn[3:0] == b0001 || in.alufn[3:0] == b1001) {
           seg.values = {8h10,8h10,8h10,8h0B};
           alu_boole.a = in.a;
           alu_boole.b = in.b;
@@ -171,7 +169,10 @@ module au_top (
         //if (in.alufn[0] == b1 && in.alufn[2:1] != b00 || in.alufn[3] == b0)
         
          if (in.alufn[3:0] == b0011 || in.alufn[3:0] == b0101 || in.alufn[3:0] == b0111){
-          seg.values = {8h10,8h10,8h10,8h0C};
+          zed = alu_adder.z;
+          ved = alu_adder.v;
+          ned = alu_adder.n;
+          seg.values = {zed,ved,ned,8h0C};
           alu_adder.x = in.a;
           alu_adder.y = in.b;
           alu_adder.cin = in.alufn[0];
@@ -179,6 +180,7 @@ module au_top (
           alu_cmp.z = alu_adder.z;
           alu_cmp.v = alu_adder.v;
           alu_cmp.n = alu_adder.n;
+
           alu_cmp.alufn = in.alufn[2:1];
           io_led[0][0] = alu_cmp.out; //true false value only 
           force_out = alu_cmp.out;
