@@ -1,8 +1,8 @@
 ### 50.002-ALU
 # HOW TO RUN THE ALU ON FPGA 
 
-io_button[0] : switches between state ENTER_A, ENTER_B, ENTER_ALUFN
-io_button[1] : Auto tester mode, switches between all valid ALUFN signals
+io_button[0] : switches between state ENTER_A, ENTER_B, ENTER_ALUFN <br />
+io_button[1] : Auto tester mode, switches between all valid ALUFN signals <br /> 
 io_button[2] : Error checking mode, carried out after inputting A and B inputs, and ALUFN_SIGNALS 
 io_button[3] : Manual tester mode 
 io_led[0], io_led[1] : Outputs for io_led
@@ -11,7 +11,7 @@ io_led[2][1:0] : state display for ENTER_A(b01), ENTER_B(b10), ENTER_ALUFN(b11)
 
 
 # Manual testing mode
-1) ALU will start in Manual Testing mode.
+ 1) ALU will start in Manual Testing mode.
 1.1) In Manual Testing mode, it will start at state ENTER_A, represented by the lights on io_led[2][1:0], enter a[16] inputs using io_dip[0] and io_dip[1], press io_button[0] 
 to move to enter b[16]
 1.2) Enter b[16] and proceed as in step 1.1)
