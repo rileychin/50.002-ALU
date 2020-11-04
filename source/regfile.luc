@@ -1,0 +1,21 @@
+module regfile (
+    input clk,  // clock
+    input read_address_1[4],
+    input read_address_2[4],
+    input write_address[4],
+    input write_data[16],
+    input write_enable,
+    input rst, // reset
+    output read_data_1[16],
+    output read_data_2[16]
+  ) {
+  .clk(clk), .rst(rst){dff registers[16][16];}
+  always {
+    read_data_1 = registers.q[read_address_1];
+    read_data_2 = registers.q[read_address_2];
+    if (read_address_1 == b1111) read_data_1 = h0;
+    if (read_address_2 == b1111) read_data_2 = h0;
+    if (write_enable && write_address != b1111){registers.d[write_address] = write_data;} 
+    
+  }
+}

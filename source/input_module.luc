@@ -1,0 +1,197 @@
+module input_module (
+    input btn_input_0,
+    input btn_input_1,
+    input btn_input_2,
+    input btn_input_3,
+    input dip_input[16],
+    input clk,  // clock
+    input rst,  // reset
+    output alufn[6],
+    output a[16],
+    output b[16],
+    output state[2],
+    output error_state[1]
+  ) {
+  
+  /*
+     INPUT FORMAT
+     
+     io_dip[1:0] => used to enter 16 bits of a and b (io_dip[1][7] = MSB, io_dip[0][0] = LSB)
+     io_dip[0][5:0] => used to enter 6 bits of alufn
+     io_button[0] => used as a "next" button. goes from ENTER_A to ENTER_B to ENTER_ALUFN back to ENTER_A
+     
+     OUTPUT FORMAT
+     io_led[1:0] => displays the result of the operation on a and b (note: comparator only uses io_led[0][0])
+     io_led[2][1:0] => displays the state that the machine is in
+       01: ENTER_A
+       10: ENTER_B
+       11: ENTER_ALUFN
+     
+     Note that the output from io_led[1:0] uses a default alufn = 000000 (ADD) until alufn has been entered.
+  */
+  
+  // b00 = 0
+  // b01 = 1
+  counter slowclock(#SIZE(1),#DIV(26), .clk(clk), .rst(rst));
+  .clk(clk) {
+    .rst(rst) {
+      dff stored_alufn[6](#INIT(0));
+      dff stored_alufn_auto[6](#INIT(0));
+      dff stored_a[16](#INIT(0));
+      dff stored_b[16](#INIT(0));
+      fsm brain= {ENTER_A, ENTER_B, ENTER_ALUFN, PROCESSING};
+      fsm alufn_op(.clk(slowclock.value), .rst(rst)) = {A_ADD,A_SUB,A_MUL,B_A,B_XOR,B_OR,B_AND,B_NOTA,B_B,B_NOTB,S_SHL,S_SHR,S_SRA,C_CMPEQ,C_CMPLT,C_CMPLE,E_ERROR};
+      fsm switch_tester = {MANUAL,AUTO,ERROR};
+      }
+    
+
+  }
+
+  always {
+    state = b00;
+    error_state = b0;
+    a = b0;
+    b = b0;
+    alufn = b0;
+    if(btn_input_1){
+      switch_tester.d = switch_tester.AUTO;
+      alufn_op.d = alufn_op.A_ADD;
+      }
+    if(btn_input_2){
+      switch_tester.d = switch_tester.ERROR;
+      }
+    if(btn_input_3){
+      switch_tester.d = switch_tester.MANUAL;
+      }
+
+    case (switch_tester.q){
+    //manual switch_tester
+      switch_tester.MANUAL:
+      error_state = b0;
+      case (brain.q) {
+      brain.ENTER_A:
+        state = b01;
+        if (btn_input_0) {
+          stored_a.d = dip_input;
+          brain.d = brain.ENTER_B;
+        } else {
+          brain.d = brain.ENTER_A;
+        }
+      
+      brain.ENTER_B:
+        state = b10;
+        if (btn_input_0) {
+          stored_b.d = dip_input;
+          brain.d = brain.ENTER_ALUFN;
+        } else {
+          brain.d = brain.ENTER_B;
+        }
+        
+      brain.ENTER_ALUFN:
+        state = b11;
+        if (btn_input_0) {
+          stored_alufn.d = dip_input[5:0];
+          brain.d = brain.ENTER_A;
+        } else {
+          brain.d = brain.ENTER_ALUFN;
+        }
+            
+      }
+        
+      a = stored_a.q;
+      b = stored_b.q;
+      alufn = stored_alufn.q;
+     //auto switch_tester
+      switch_tester.AUTO:
+      error_state = b0;
+      stored_a.d = stored_a.q;
+      stored_b.d = stored_b.q;
+      state = b11;
+         case(alufn_op.q){
+            alufn_op.A_ADD: 
+              stored_alufn_auto.d = b000000;
+              alufn_op.d = alufn_op.A_SUB;
+              
+            alufn_op.A_SUB:
+            stored_alufn_auto.d = b000001;
+              alufn_op.d = alufn_op.A_MUL;
+              
+            alufn_op.A_MUL:
+            stored_alufn_auto.d = b000010;
+              alufn_op.d = alufn_op.B_A;
+              
+            alufn_op.B_A:
+            stored_alufn_auto.d = b011010;
+              alufn_op.d =alufn_op.B_XOR;
+            
+            alufn_op.B_XOR:
+            stored_alufn_auto.d = b010110;
+              alufn_op.d = alufn_op.B_OR;
+            
+            alufn_op.B_OR:
+            stored_alufn_auto.d = b011110;
+              alufn_op.d = alufn_op.B_AND;
+              
+            alufn_op.B_AND:
+            stored_alufn_auto.d = b011000;
+              alufn_op.d = alufn_op.B_NOTA;
+              
+            alufn_op.B_NOTA:
+            stored_alufn_auto.d = b010101;
+              alufn_op.d = alufn_op.B_B;
+              
+            alufn_op.B_B:
+            stored_alufn_auto.d = b011100;
+              alufn_op.d = alufn_op.B_NOTB;
+              
+            alufn_op.B_NOTB:
+            stored_alufn_auto.d = b010011;
+              alufn_op.d = alufn_op.S_SHL;
+              
+            alufn_op.S_SHL:
+            stored_alufn_auto.d = b100000;
+              alufn_op.d = alufn_op.S_SHR;
+              
+            alufn_op.S_SHR:
+            stored_alufn_auto.d = b100001;
+              alufn_op.d = alufn_op.S_SRA;
+              
+            alufn_op.S_SRA:
+            stored_alufn_auto.d = b100011;
+              alufn_op.d = alufn_op.C_CMPEQ;
+              
+            alufn_op.C_CMPEQ:
+            stored_alufn_auto.d = b110011;
+              alufn_op.d = alufn_op.C_CMPLT;
+              
+            alufn_op.C_CMPLT:
+            stored_alufn_auto.d = b110101;
+              alufn_op.d = alufn_op.C_CMPLE;
+              
+            alufn_op.C_CMPLE:
+            stored_alufn_auto.d = b110111;
+              alufn_op.d = alufn_op.E_ERROR;
+              
+            //error test for 111111
+            alufn_op.E_ERROR:
+            stored_alufn_auto.d = b111111;
+              alufn_op.d = alufn_op.A_ADD;
+           
+            }
+            a = stored_a.q;
+            b = stored_b.q;
+            alufn = stored_alufn_auto.q;
+        
+      //error switch_tester  
+      switch_tester.ERROR:
+        state = b11;
+        error_state = b1;
+        stored_a.d = stored_a.q;
+        stored_b.d = stored_b.q; 
+        a = stored_a.q;
+        b = stored_b.q; 
+        alufn = stored_alufn.q;
+           
+  }
+
+}

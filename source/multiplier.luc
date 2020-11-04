@@ -1,0 +1,63 @@
+module multiplier (
+    input a[16],
+    input b[16],
+    output out[16]
+  ) {
+  
+  /* 
+     MULTIPLIER TEST CASES
+     
+      3*4 = 12
+
+      a = 0000 0000 0000 0011
+      b = 0000 0000 0000 0100
+      
+      out = 0000 0000 0000 1100
+      
+      
+      25 * 17 = 425
+      
+      a = 0000 0000 0001 1001
+      b = 0000 0000 0001 0001
+      
+      out = 0000 0001 1010 1001 
+  */
+  
+  adder fa[16][16];
+  sig ab[16][16];
+  var i, j;
+
+  always {
+    out = 0;
+    
+    out[0] = a[0] & b[0];    // LSB of output is determined only by A0 AND B0 
+    fa.x[0] = 0;             // initialize signal x 
+    for (i = 0; i<16; i++) { // loop through 16 bits of B
+      ab[i] = b0;    // initializing ab[i] so that it can be read later on
+      for (j = 0; j<16; j++) {  // loop through 16 bits of A
+        if (i + j < 16) {       // condition allows us to not consider overflowed bits
+          ab[i][j+i] = a[j] & b[i];
+        }
+        if (i > 0 && j>= i) {    // since the first row of AND gates corresponding to the LSB of B do not have to be passed through a full adder, 
+                                 // and all bits that correspond already determined outputs no longer have to be computed, we use this condition to ignore those bits
+        
+          fa.x[i][j] = ab[i][j];  // assign x to the output of the current AND gate
+          
+          if (i == 1) {          // the input to the first row of full adders is different from all other rows as y is the output of the first row of AND gates for the first row of full adders
+            fa.y[i][j] = ab[i-1][j];
+          } else {               // meanwhile, all other rows use the output from the full adder from the previous row as the y input
+            fa.y[i][j] = fa.s[i-1][j];
+          }
+          
+          if (j == i) {          // the first full adder in each row receives a Cin of 0
+            fa.cin[i][j] = b0;
+            out[i] = fa.s[i][j];
+          } else {               // all other rows use the Cout of the adder before it in the row as the Cin input
+            fa.cin[i][j] = fa.cout[i][j-1];
+          }
+        }
+      }
+      
+    }
+      }
+}

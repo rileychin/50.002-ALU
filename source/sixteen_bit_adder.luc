@@ -1,0 +1,72 @@
+module sixteen_bit_adder (
+    input x[16],
+    input y[16],
+    input cin,
+    output s[16],
+    output cout,
+    output z,
+    output n,
+    output v
+  ) {
+  /*
+    ADDER TEST CASES:
+     alufn = 000000 (ADD)
+     #1
+     x = 0000 0000 0011 0011
+     y = 0000 0000 0101 1010
+
+     s = 0000 0000 1000 1101
+     
+     #2
+     x = 1000 1001 0011 0010
+     y = 1010 0011 0101 0011
+
+     s = 0010 1100 1000 0101
+     
+     alufn = 000001 (SUB)
+     #3
+     x = 0000 0000 0010 0011
+     y = 0000 0000 0000 1000
+
+     s = 0000 0000 0001 1011
+     
+     
+     Z, V, N TEST CASES
+     
+     Z = 1
+     x = 1111 0000 0000 0001
+     y = 1111 0000 0000 0001
+     
+     V = 1
+     x = 1000 0000 0000 0000
+     y = 0111 1111 1111 1111
+     
+     N = 1
+     x = 1111 1111 1111 1111
+     y = 0111 1111 1111 1111
+     
+  */
+
+  sig y_prime[16];
+  adder fulladder[16];
+  
+  always {
+    fulladder.x = x;
+    y_prime = y ^ 16x{cin};
+    fulladder.y = y_prime;
+    fulladder.cin[0] = cin;
+    fulladder.cin[15:1] = fulladder.cout[14:0];
+    s = fulladder.s;
+    cout = fulladder.cout[15];
+    
+    n = fulladder.s[15];
+    if (~|fulladder.s) {
+      z = b1;
+    } else {
+      z = b0;
+    }
+    
+    v = (x[15] & y_prime[15] & ~fulladder.s[15]) | (~x[15] & ~y_prime[15] & fulladder.s[15]);
+    
+  }
+}

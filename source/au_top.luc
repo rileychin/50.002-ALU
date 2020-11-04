@@ -1,0 +1,200 @@
+module au_top (
+    input clk,              // 100MHz clock
+    input rst_n,            // reset button (active low)
+    output led [8],         // 8 user controllable LEDs
+    input usb_rx,           // USB->Serial input
+    output usb_tx,          // USB->Serial output
+    output io_led [3][8],   // LEDs on IO Shield
+    output io_seg [8],      // 7-segment LEDs on IO Shield
+    output io_sel [4],      // Digit select on IO Shield
+    output customout[3],
+    input io_button [5],    // 5 buttons on IO Shield
+    input io_dip [3][8]     // DIP switches on IO Shield
+  ) {
+  
+  sig rst, error, force_out[16];                  // reset signal
+  
+  sixteen_bit_adder alu_adder;
+  sixteen_bit_boolean alu_boole;
+  comparator alu_cmp;
+  shifter alu_shift; 
+  multiplier alu_mul;
+  //input_module in(.clk(slowclock.value), .rst(rst));
+  input_module in(.clk(clk), .rst(rst));
+  .clk(clk) {
+    // The reset conditioner is used to synchronize the reset signal to the FPGA
+    // clock. This ensures the entire FPGA comes out of reset at the same time.
+    reset_conditioner reset_cond;
+    button_conditioner buttoncond[4];
+    edge_detector buttondetector[4](#RISE(1), #FALL(0));
+    .rst(rst) {
+      multi_seven_seg seg;
+    }
+  }
+
+  
+  always {
+    // DEFAULT ASSIGNMENTS FROM CREATING A PROJECT
+    reset_cond.in = ~rst_n; // input raw inverted reset signal
+    rst = reset_cond.out;   // conditioned reset
+    
+    usb_tx = usb_rx;        // loop serial port
+    
+    led = 8h00;             // turn LEDs off
+    
+    io_led = 3x{{8h00}};    // turn LEDs off
+    io_seg = 8hff;          // turn segments off
+    io_sel = 4hf;           // select no digits
+    customout = b000;
+    
+    // INITIALIZE INPUTS
+    alu_adder.x = b0;
+    alu_adder.y = b0;
+    alu_adder.cin = b0;
+    
+    alu_boole.a = b0;
+    alu_boole.b = b0;
+    alu_boole.alufn = b0;
+    
+    alu_cmp.v = b0;
+    alu_cmp.z = b0;
+    alu_cmp.n = b0;
+    alu_cmp.alufn = b0;
+    
+    alu_shift.a = b0;
+    alu_shift.b = b0;
+    alu_shift.alufn = b0;
+    
+    alu_mul.a = b0;
+    alu_mul.b = b0;
+    
+    //INITIALIZE 7 SEG BITS DEFAULT ALL TO empty 
+    seg.values = {8h10,8h10,8h10,8h10};
+    
+    // INITIALIZE ERROR BIT
+    error = b0;
+    
+    //INITIALIZE force_out bit;
+    force_out = 16b0000000000000000;
+    
+    // RECEIVING INPUT
+    
+    //manual input tester BUTTON 0
+    buttoncond.in[0] = io_button[0];
+    buttondetector.in[0] = buttoncond.out[0];
+    in.btn_input_0 = buttondetector.out[0];
+    
+    //auto tester BUTTON 1
+    buttoncond.in[1] = io_button[1];
+    buttondetector.in[1] = buttoncond.out[1];
+    in.btn_input_1 = buttondetector.out[1];
+    
+    //error checker for valid in --> invalid output BUTTON 2
+    buttoncond.in[2] = io_button[2];
+    buttondetector.in[2] = buttoncond.out[2];
+    in.btn_input_2 = buttondetector.out[2];
+    
+    //state switch input BUTTON 3
+    buttoncond.in[3] = io_button[3];
+    buttondetector.in[3] = buttoncond.out[3];
+    in.btn_input_3 = buttondetector.out[3];
+    
+    in.dip_input[7:0] = io_dip[0];
+    in.dip_input[15:8] = io_dip[1];
+    io_led[2][1:0] = in.state;
+    io_led[2][7:2] = in.alufn[5:0];  // 00: adder, 01: boole, 10: shifter, 11: comparator
+    
+    
+    case (in.alufn[5:4]) {
+      b00:  // adder or multiplier
+      
+       // ADD: 000000; SUB: 000001; MUL: 000010
+       if (in.alufn[3:1] == b000) {
+        seg.values = {8h10,8h10,8h10,8h0A};
+         alu_adder.x = in.a;
+         alu_adder.y = in.b;
+         alu_adder.cin = in.alufn[0];
+         io_led[0] = alu_adder.s[7:0];
+         io_led[1] = alu_adder.s[15:8];
+          force_out[15:8] = alu_adder.s[15:8];
+          force_out[7:0] = alu_adder.s[7:0];
+       } else if (in.alufn[3:0] == b0010) {
+        seg.values = {8h10,8h10,8h10,8h0A};
+         alu_mul.a = in.a;
+         alu_mul.b = in.b;
+         io_led[1] = alu_mul.out[15:8];
+         io_led[0] = alu_mul.out[7:0];
+          force_out[15:8] = alu_mul.out[15:8];
+          force_out[7:0] = alu_mul.out[7:0];
+       }
+       else {
+        seg.values = {8h10,8h0E,8h0F,8h0F};
+       }
+                 
+      b01:  // boole
+      
+        // "A" (LDR): 011010; XOR: 010110; OR: 011110; AND: 011000 NOTA:010101 B:011100 NOTB: 010011
+        if (in.alufn[3:0] == b1010 || in.alufn[3:0] == b0110 || in.alufn[3:0] == b1110 || in.alufn[3:0] == b1000 || in.alufn[3:0] == b0101||in.alufn[3:0] == b1100 || in.alufn[3:0] == b0011) {
+          seg.values = {8h10,8h10,8h10,8h0B};
+          alu_boole.a = in.a;
+          alu_boole.b = in.b;
+          alu_boole.alufn = in.alufn[3:0];
+          io_led[0] = alu_boole.out[7:0];
+          io_led[1] = alu_boole.out[15:8];
+          force_out[15:8] = alu_boole.out[15:8];
+          force_out[7:0] = alu_boole.out[7:0];
+        } else {
+        seg.values = {8h10,8h0E,8h0F,8h0F};
+
+        }
+        
+        
+      b10:  // shifter
+       // SHL: 100000; SHR: 100001; SRA: 100011
+       if (in.alufn[3:2] == b00 && in.alufn[1:0] != b10) {
+         seg.values = {8h10,8h10,8h10,8h0D};
+         alu_shift.a = in.a;
+         alu_shift.b = in.b;
+         alu_shift.alufn = in.alufn;
+         io_led[1] = alu_shift.s[15:8];
+         io_led[0] = alu_shift.s[7:0];
+         force_out[15:8] = alu_shift.s[15:8];
+          force_out[7:0] = alu_shift.s[7:0];
+       } else {
+        seg.values = {8h10,8h0E,8h0F,8h0F};
+
+       }
+        
+        
+      b11:  // comparator
+        // CMPEQ: 110011; CMPLT: 110101; CMPLE: 110111
+        //if (in.alufn[0] == b1 && in.alufn[2:1] != b00 || in.alufn[3] == b0)
+        
+         if (in.alufn[3:0] == b0011 || in.alufn[3:0] == b0101 || in.alufn[3:0] == b0111){
+          seg.values = {8h10,8h10,8h10,8h0C};
+          alu_adder.x = in.a;
+          alu_adder.y = in.b;
+          alu_adder.cin = in.alufn[0];
+          
+          alu_cmp.z = alu_adder.z;
+          alu_cmp.v = alu_adder.v;
+          alu_cmp.n = alu_adder.n;
+          alu_cmp.alufn = in.alufn[2:1];
+          io_led[0][0] = alu_cmp.out; //true false value only 
+          force_out = alu_cmp.out;
+        } else {
+        seg.values = {8h10,8h0E,8h0F,8h0F};
+      
+        }
+        
+    }
+    
+    if (in.error_state == b1 && (force_out[15:8] != io_dip[2] || force_out[7:0] != io_dip[1])){
+      seg.values = {8h10,8h0E,8h0F,8h0F};
+      }
+    
+    io_seg = ~seg.seg;   // connect segments to counter
+    io_sel = ~seg.sel; // connect digit select to counter
+    
+  }
+}

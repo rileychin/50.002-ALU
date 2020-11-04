@@ -1,0 +1,18 @@
+module adder (
+    input x,
+    input y,
+    input cin,
+    output s,
+    output cout
+  ) {
+  
+  sig i, j, k;
+
+  always {
+    s = x ^ y ^ cin;
+    i = x & y;
+    j = y & cin;
+    k = x & cin;
+    cout = i | j | k;
+  }
+}

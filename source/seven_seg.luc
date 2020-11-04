@@ -1,0 +1,29 @@
+module seven_seg (
+    input char[8],
+    output segs[7]
+  ) {
+ 
+  always {
+    case (char) {
+      h00: segs = 7b0111111;
+      h01: segs = 7b0000110;
+      h02: segs = 7b1011011;
+      h03: segs = 7b1001111;
+      h04: segs = 7b1100110;
+      h05: segs = 7b1101101;
+      h06: segs = 7b1111101;
+      h07: segs = 7b0000111;
+      h08: segs = 7b1111111;
+      h09: segs = 7b1100111; 
+      h0A: segs = 7b1110111; // displays A for adder
+      h0B: segs = 7b1111100; // displays b for boolean
+      h0C: segs = 7b0111001; //displays C for compare
+      h0D: segs = 7b1101101; //displays S for shifter(same as a 5)
+      h0E: segs = 7b1111001; // displays E 
+      h0F: segs = 7b0110011; // displays r
+      h10: segs = 7b0000000; //display no lights  
+
+      default: segs = 7b0000000;
+    }
+  }
+}
