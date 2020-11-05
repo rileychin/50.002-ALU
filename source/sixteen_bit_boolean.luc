@@ -1,51 +1,19 @@
 module sixteen_bit_boolean (
     input a[16],
     input b[16],
-    input alufn[4],
-    // input clk,  // clock
-    // input rst,  // reset
+    input alufn[4],    // boolean module requires alufn[3:0] to work
     output out[16]
   ) {
   
-  /*
-     BOOLEAN TEST CASES
-    
-     AND (alufn = 011000)
-
-      a = 1010 0101 1100 0011
-      b = 1111 0000 1010 0101
-      
-      out = 1010 0000 1000 0001
-      
-     OR (alufn = 011110)
-      
-      a = 1010 0101 1100 0011
-      b = 1111 0000 1010 0101
-      
-      out = 1111 0101 1110 0111
-      
-     XOR (alufn = 010110)
-      
-      a = 1010 0101 1100 0011
-      b = 1111 0000 1010 0101
-      
-      out = 0101 0101 0110 0110
-      
-     "A" (alufn = 011010)
-      
-      a = 1010 0101 1100 0011
-      b = 1111 0000 1010 0101
-      
-      out = 1010 0101 1100 0011
-  */
-  
-  boolean oneBitBool[16];
+  boolean oneBitBool[16];    // initialise one boolean module for each pair of input bit 
 
   always {
+    // feeding input and alufn to boolean module
     oneBitBool.a = a;
     oneBitBool.b = b;
     oneBitBool.alufn = 16x{{alufn}};
     
+    // 16 bit output produced by 16 boolean units
     out = oneBitBool.out;
   }
 }

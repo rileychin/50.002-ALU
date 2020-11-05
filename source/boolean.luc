@@ -7,6 +7,7 @@ module boolean (
       
   always {
     out = b00;
+    // using ab as selector bits, output the boolean logic based on alufn
     case (c{a,b}) {
       b00:
         out = alufn[0];

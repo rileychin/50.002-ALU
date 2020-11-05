@@ -5,30 +5,6 @@ module shifter (
     output s[16]
   ) {
   
-  /*
-  
-     SHIFTER TEST CASES
-     
-     SHL (alufn = 10xx00)
-     a = 1100 0101 1110 1101
-     b[3:0] = 0011
-     
-     s = 0010 1111 0110 1000
-     
-     SHR (alufn = 10xx01)
-     a = 1100 0101 1110 1101
-     b[3:0] = 0011
-     
-     s = 0001 1000 1011 1101
-     
-     SRA (alufn = 10xx11)
-     a = 1100 0101 1110 1101
-     b[3:0] = 0011
-     
-     s = 1111 1000 1011 1101
-  
-  */
-  
   sig x[16];
   sig y[16];
   sig z[16];
@@ -37,77 +13,80 @@ module shifter (
   sig msb;
   var i;
   
-  always {
-    // If SHR, then invert a to a_inv so SHL logic works. 
+  always { 
     case(alufn[0]){
-      b0:
+      // checks whether alufn is for shifting left or right => so that we can reverse order of bits if needed
+      b0:  // shift left => use original input a
         a_inv = a;
-      b1:
-        for (i=0; i<16; i++){   // assign a_inv[0] with a[15]
+      b1:  // shift right => reverse order of bits by assigning a_inv[0] with a[15], a_inv[1] with a[14], ...
+        for (i=0; i<16; i++){   
           a_inv[15-i] = a[i];
         }
-        
-      
       default:
         a_inv = a;
       }
-    // If SHA, then pad with a[31] (msb)
+    
     case(alufn[1]){
-      b0:
+      // checks whether alufn is for shifting with sign extension or not => so that we can determine what bit to use for padding
+      b0:  // shift wtihout sign extension => pad with 0
         msb = b0; 
-      b1:
+      b1:  // shift with sign extension => pad with MSB
         msb = a[15]; //this is the original MSB
       default:
         msb = b0;
         }
       
-    // shift 8 bits to left if b[3]=1
+    // the following 4 cases represent the 4 muxes chained together in series for shifting max 15 bits of the 16 bit input
     case(b[3]){
-        b0:
+        // check whether to shift 8 bits
+        b0:  // no shifting
             x = a_inv;
-        b1:
+        b1:  // shift 8 bits
             x[15:8] = a_inv[7:0];
             x[7:0] = 8x{msb}; 
         default:
             x = a_inv;
         }
-    	// shift 4 bits to left if b[2]=1
+    	
     case(b[2]){
-        b0:
+        // check whether to shift 4 bits
+        b0:  // no shifting
             y = x;
-        b1:
+        b1:  // shift 4 bits
             y[15:4] = x[11:0];
             y[3:0] = 4x{msb}; 
         default:
             y = x;
         }
-	    // shift 2 bits to left if b[1]=1
+
 	    case(b[1]){
-        b0:
+        // check whether to shift 2 bits
+        b0:  // no shifting
             z = y;
-        b1:
+        b1:  // shift 2 bits
             z[15:2] = y[13:0];
             z[1:0] = 2x{msb};
         default:
             z = y;
         }
-	    // shift 1 bit to left if b[0]=1
+	    
 	    case(b[0]){
-        b0:
+        // check whether to shift 1 bit
+        b0:  // no shifting
             a_inv2 = z;
-        b1:
+        b1:  // shift 1 bit
             a_inv2[15:1] = z[14:0];
             a_inv2[0] = msb;
         default:
             a_inv2 = z;
         }
     
-    // If SHR, we must invert the final shifted value a_inv2
+    // if we inverted the input initially, we must re-invert the final shifted value to obtain the correct shift right output
     case(alufn[0]){
-      b0:
+      b0:  // shift left => do nothing
         s = a_inv2;
-      b1:
-        for (i=0; i<16; i++){   // assign a_inv[0] with a[15]
+      b1:  // shift right => re-invert final shifted value
+        for (i=0; i<16; i++){   
           s[15-i] = a_inv2[i];
         }
       

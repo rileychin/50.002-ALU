@@ -19,8 +19,8 @@ module seven_seg (
       h0B: segs = 7b1111100; // displays b for boolean
       h0C: segs = 7b0111001; //displays C for compare
       h0D: segs = 7b1101101; //displays S for shifter(same as a 5)
-      h0E: segs = 7b1111001; // displays E 
-      h0F: segs = 7b0110011; // displays r
+      h0E: segs = 7b1111001; // displays E as part of "Err" for error
+      h0F: segs = 7b0110011; // displays r as part of "Err" for error
       h10: segs = 7b0000000; //display no lights  
 
       default: segs = 7b0000000;

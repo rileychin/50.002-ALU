@@ -6,11 +6,13 @@ module adder (
     output cout
   ) {
   
-  sig i, j, k;
+  sig i, j, k;    // intermediate variables
 
   always {
-    s = x ^ y ^ cin;
-    i = x & y;
+    s = x ^ y ^ cin;    // sum output
+    // as long as at least 2 of the 3 inputs, x or y or cin, is 1,
+    // cout will be 1
+    i = x & y;          
     j = y & cin;
     k = x & cin;
     cout = i | j | k;

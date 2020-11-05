@@ -12,7 +12,7 @@ module au_top (
     input io_dip [3][8]     // DIP switches on IO Shield
   ) {
   
-  sig rst, force_out[16], zed[8], ved[8],ned[8];                  // reset signal
+  sig rst, force_out[16], zed[8], ved[8],ned[8];                  
   
   sixteen_bit_adder alu_adder;
   sixteen_bit_boolean alu_boole;
@@ -100,7 +100,7 @@ module au_top (
     in.dip_input[7:0] = io_dip[0];
     in.dip_input[15:8] = io_dip[1];
     io_led[2][1:0] = in.state;
-    io_led[2][7:2] = in.alufn[5:0];  // 00: adder, 01: boole, 10: shifter, 11: comparator
+    io_led[2][7:2] = in.alufn[5:0];  // 00: adder/multiplier, 01: boole, 10: shifter, 11: comparator
     
     
     case (in.alufn[5:4]) {
@@ -108,22 +108,22 @@ module au_top (
       
        // ADD: 000000; SUB: 000001; MUL: 000010
        if (in.alufn[3:1] == b000) {
-        seg.values = {8h10,8h10,8h10,8h0A};
+         seg.values = {8h10,8h10,8h10,8h0A};
          alu_adder.x = in.a;
          alu_adder.y = in.b;
          alu_adder.cin = in.alufn[0];
          io_led[0] = alu_adder.s[7:0];
          io_led[1] = alu_adder.s[15:8];
-          force_out[15:8] = alu_adder.s[15:8];
-          force_out[7:0] = alu_adder.s[7:0];
+         force_out[15:8] = alu_adder.s[15:8];
+         force_out[7:0] = alu_adder.s[7:0];
        } else if (in.alufn[3:0] == b0010) {
-        seg.values = {8h10,8h10,8h10,8h0A};
+         seg.values = {8h10,8h10,8h10,8h0A};
          alu_mul.a = in.a;
          alu_mul.b = in.b;
          io_led[1] = alu_mul.out[15:8];
          io_led[0] = alu_mul.out[7:0];
-          force_out[15:8] = alu_mul.out[15:8];
-          force_out[7:0] = alu_mul.out[7:0];
+         force_out[15:8] = alu_mul.out[15:8];
+         force_out[7:0] = alu_mul.out[7:0];
        }
        else {
         seg.values = {8h10,8h0E,8h0F,8h0F};
@@ -131,7 +131,7 @@ module au_top (
                  
       b01:  // boole
       
-        // "A" (LDR): 011010; XOR: 010110; OR: 011110; AND: 011000 NOTA:010101 B:011100 NOTB: 010011 NAND: 010111 NOR: 010001 XNOR: 011001
+        // A: 011010; XOR: 010110; OR: 011110; AND: 011000; NOTA:010101; B:011100; NOTB: 010011; NAND: 010111; NOR: 010001; NXOR: 011001;
         if (in.alufn[3:0] == b1010 || in.alufn[3:0] == b0110 || in.alufn[3:0] == b1110 || in.alufn[3:0] == b1000 || in.alufn[3:0] == b0101||in.alufn[3:0] == b1100 || in.alufn[3:0] == b0011 || in.alufn[3:0] == b0111 || in.alufn[3:0] == b0001 || in.alufn[3:0] == b1001) {
           seg.values = {8h10,8h10,8h10,8h0B};
           alu_boole.a = in.a;
@@ -142,7 +142,7 @@ module au_top (
           force_out[15:8] = alu_boole.out[15:8];
           force_out[7:0] = alu_boole.out[7:0];
         } else {
-        seg.values = {8h10,8h0E,8h0F,8h0F};
+          seg.values = {8h10,8h0E,8h0F,8h0F};
 
         }
         
@@ -157,21 +157,19 @@ module au_top (
          io_led[1] = alu_shift.s[15:8];
          io_led[0] = alu_shift.s[7:0];
          force_out[15:8] = alu_shift.s[15:8];
-          force_out[7:0] = alu_shift.s[7:0];
+         force_out[7:0] = alu_shift.s[7:0];
        } else {
-        seg.values = {8h10,8h0E,8h0F,8h0F};
-
+         seg.values = {8h10,8h0E,8h0F,8h0F};
        }
         
         
       b11:  // comparator
         // CMPEQ: 110011; CMPLT: 110101; CMPLE: 110111
-        //if (in.alufn[0] == b1 && in.alufn[2:1] != b00 || in.alufn[3] == b0)
         
          if (in.alufn[3:0] == b0011 || in.alufn[3:0] == b0101 || in.alufn[3:0] == b0111){
-          zed = alu_adder.z;
-          ved = alu_adder.v;
-          ned = alu_adder.n;
+          zed = alu_adder.z;  // output value of z (0 or 1) on 7 segment
+          ved = alu_adder.v;  // output value of v (0 or 1) on 7 segment
+          ned = alu_adder.n;  // output value of n (0 or 1) on 7 segment
           seg.values = {zed,ved,ned,8h0C};
           alu_adder.x = in.a;
           alu_adder.y = in.b;
@@ -185,15 +183,17 @@ module au_top (
           io_led[0][0] = alu_cmp.out; //true false value only 
           force_out = alu_cmp.out;
         } else {
-        seg.values = {8h10,8h0E,8h0F,8h0F};
+          seg.values = {8h10,8h0E,8h0F,8h0F};
       
         }
         
     }
     
+    // checking for error while in error checking mode
+    // checking that io_dip[2:1] input matches output from the previously entered A and B inputs
     if (in.error_state == b1 && (force_out[15:8] != io_dip[2] || force_out[7:0] != io_dip[1])){
       seg.values = {8h10,8h0E,8h0F,8h0F};
-      }
+    }
     
     io_seg = ~seg.seg;   // connect segments to counter
     io_sel = ~seg.sel; // connect digit select to counter
