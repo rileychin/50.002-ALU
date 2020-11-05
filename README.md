@@ -1,45 +1,73 @@
 # 50.002-ALU-Checkoff-1
-## HOW TO RUN THE ALU ON FPGA 
 
-io_button[0] : switches between state ENTER_A, ENTER_B, ENTER_ALUFN <br />
-io_button[1] : Auto tester mode, switches between all valid ALUFN signals <br /> 
-io_button[2] : Error checking mode, carried out after inputting A and B inputs, and ALUFN_SIGNALS <br />
-io_button[3] : Manual tester mode <br />
-io_led[0], io_led[1] : Outputs for io_led <br />
-io_led[2][7:2] : alufn_signal input <br />
-io_led[2][1:0] : state display for ENTER_A(b01), ENTER_B(b10), ENTER_ALUFN(b11) <br />
+## Overview
+Using the Alchitry Au FPGA, our team has implemented a 16-bit ALU which contains the following 5 modules: 
+- Full Adder
+- Multiplier
+- Comparator
+- Boolean
+- Shifter
 
+Using these modules, our ALU can perform 19 distinct operations, such as addition, subtraction, multiplication, logical operations and bit shifting. Our ALU is also able to catch and handle errors, such as invalid ALUFNs and incorrect output. 
 
-## Manual testing mode
- 1) ALU will start in Manual Testing mode. <br />
-1.1) In Manual Testing mode, it will start at state ENTER_A, represented by the lights on io_led[2][1:0], enter a[16] inputs using io_dip[0] and io_dip[1], press io_button[0] 
-to move to enter b[16] <br />
-1.2) Enter b[16] and proceed as in step 1.1) <br />
-1.3) Enter alufn[6] and proceed as in step 1.1) <br />
-1.4) Output will show on io_led[0] and io_led[1] as per a[16],b[16] and alufn[6] inputs <br />
+Our ALU includes 3 testing modes: manual testing, auto testing and error checking. Details on each mode and the way to switch between modes will be explained in the following sections.
 
+## Switching Between Modes
+Upon starting or resetting, the ALU will begin in the manual testing mode. To switch to each mode, use:
+- io_button[1]: Auto tester mode
+- io_button[2]: Error checking mode
+- io_button[3]: Manual input mode
 
-## Auto tester mode
-2) ALU is in auto tester mode <br />
-2.1) Values of a[16] and b[16] are stored as inputs for auto tester mode <br />
-2.2) FPGA will cycle through all valid (and 1 invalid) alufn signal, and display outputs on io_led[0] and io_led[1] <br />
+## Manual Testing Mode
+In the manual testing mode, users can enter 2 16-bit input values,A and B, as well as a 6-bit ALUFN code. Input is done using the dip switches on the FPGA, io_dip[1:0]. All 16 switches are used for A and B, while the rightmost 6 switches are used to enter ALUFN. These are the steps for using the manual testing mode:
+1. Begin at state ENTER_A: flip the switches io_dip[1:0] to enter your input for A and press io_button[0]
+2. Moved to state ENTER_B: flip the switches io_dip[1:0] to enter your input for B and press io_button[0]
+3. Moved to state ENTER_ALUFN: flip the switcehs io_dip[0][5:0] to enter your input for ALUFN and press io_button[0]
+4. At this point, the correct output will be displayed on io_led[1:0]. Note that while there is a constant output on these 16 LEDs, the output is only meaningful after entering all three values for A, B and ALUFN. The rightmost seven segment will also indicate which ALU module is currently being used (A: adder/multiplier, b: Boolean, C: comparator, S: shifter) 
+5. To enter a new set of values for A, B and ALUFN, simply repeat steps 1-4.
 
+The input handler of the manual testing mode is implemented with a finite state machine (fsm). io_led[2][1:0] is used to indicate the current state of the fsm. The following states correspond to the following outputs:
+- ENTER_A: 01
+- ENTER_B: 10
+- ENTER_ALUFN: 11
+
+Note that if an invalid ALUFN is entered, the seven segments will display 'Err' to indicate that there has been an error.
+
+## Auto Testing Mode
+### Input Values
+In the auto testing mode, 6 pairs of A and B input values are stored as constants in the auto_tester module. During the auto testing process, an fsm cycles through the pairs of A and B values, and for each pair, a second fsm cycles through the 19 valid and 1 invalid ALUFN signals according to a slowed clock cycle. 
+
+### Output
+For the auto testing mode, there are a number of key output dispalyed on the FPGA. These are:
+- io_led[1:0]: actual output from passing the values of A, B and ALUFN through the ALU modules
+- io_led[2][1:0]: indicator for whether the actual output from the ALU matches the predefined expected output for each test case. io_led[2][0] lights up when there is a match while io_led[2][1] lights up when there isn't. 
+- io_led[2][7:2]: current ALUFN
+- seg.values[3] (rightmost seven segment): current pair of A and B being tested (ranges from 1-6)
+- seg.values[0] (leftmost seven segment): current ALU module being used (A: adder/multiplier, b: Boolean, C: comparator, S: shifter)
+- seg.values[2:0] (3 leftmost seven segments): shows 'Err' when an invalid ALUFN is entered
+
+### Error Handling
+The auto tester catches and handles two types of errors. First, it indicates that an invalid ALUFN has been entered by displaying 'Err' on the seven segments. Second, when the output from the ALU does not match the expected output, io_led[2][1] will light up. 
+
+The incorrect output error case was simulated on the auto tester by selecting 5 specific combinations of A, B and ALUFN from our test cases and specially tweaking the output from the ALU. Note that this adjustment does not affect the correctness of the results from the manual testing mode, even if the same combination of A, B and ALUFN is entered there. For more details on the actual test cases used to simulate these errors, please refer to the "Test Cases" section below. 
 
 ## Error checking mode
-3) ALU is in Error checking mode <br />
-3.1) ALU will display ERR on 7segment display, until a correct input on io_dip[1] and io_dip[2] matches output of ALU operation <br />
-3.2) io_dip[1] : out[7:0] , io_dip[2] : out[15:8] <br />
+In the error checking mode, io_led[1:0] will display the output from the ALU that was obtained from the most recent set of inputs A, B and ALUFN, from either manual or auto testing. 'Err' will be displayed on the seven segments until the input from io_dip[2:1] matches the displayed output.
 
+The purpose of this mode is to allow us to check that the ALU is producing the correct output for a given input. This function allows us to either manually or use a second source to calculate the expected output for a given set of input, and check it against the output from the ALU to identify whether the output from the ALU is correct.
+
+Once the output matches the input from io_dip[2:1], the rightmost seven segment will display an 'E' to indicate that the ALU is currently in the error checking mode. <br><br>
 
 # Test Cases
-We will highlight the special outputs for our 6 test cases. The full list of outputs can be found below
+We will highlight the special outputs for our 6 test cases. The full list of outputs can be found below. The test cases used to simulate the "incorrect output" error for the auto tester will be marked out from the full list of test cases below. <br><br>
 ### CASE_1
 A : 0000 0000 0000 0000 = 0
 B : 0000 0000 0000 0000 = 0
 |ALUFN  |OUTPUT  | EXPLANATION|
 |--|--|--|
 | CMPEQ/CMPLE | 1 | A-B=0, so z=0. Hence A==B and A<=B will be true	 |
-|CMPLT| 0 | A-B=0. MSB of Output=0 so n=0 and since MSB of A=0 and MSB of B=-1, v=0. so A<B will be false |
+|CMPLT| 0 | A-B=0. MSB of Output=0 so n=0 and since MSB of A=0 and MSB of B=-1, v=0. so A<B will be false | 
+<br>
 
 ### CASE_2
 A : 1111 1111 1111 1111 = -1
@@ -50,6 +78,7 @@ B : 0000 0000 0000 0001 = 1
 | SUB | 1111111111111110 | There is an overflow in this case. Output is correct as -1-1=-2|
 | SHA |1111111111111111 | Considering last 4 bits of B, we only shift A by 1 bit to the right. Since MSB of A=1, it still shifts right by 1 bit but we pad it with 1, thus is appears the same |
 | CMPLT/CMPLE | 1 | Since the output of A-B=-2, n=1 and since MSB of A, -B and Output=1, z=0, A<B and A<=B will be true |
+<br>
 
 ### CASE_3
 A : 1010 0101 1100 0011 = -23101
@@ -61,6 +90,7 @@ B : 1111 0000 1010 0101 = -3931
 | SHA | 1111110100101110 | We only shift by 5 bits as we consider the last 4 bits of B. Since MSB of A=1, we shift A to the right by padding it with 1 on the left instead of 0 |
 | CMPLT/CMPLE | 1 |For A-B, n=1 and since MSB of A=0 and MSB of -B=1, v=0.Thus A<B and A<=B will be true |
 | CMPEQ | 0 |Since A-B!=0,z=0 and A==B will be false |
+<br>
 
 ### CASE_4
 A : 0000 0000 0001 1001 = 25
@@ -71,6 +101,7 @@ B : 0000 0000 0001 0111 = 23
 | SHR/SHA | 0000000000000000 | We only shift by 7 bits as we consider the last 4 bits of B. Both will have same result in this case as MSB is 0, so they both pad A with 0 on the left |
 | CMPLT/CMPLE| 0 | Since A-B=2, n=0 and since MSB of A=0 and MSB of -B=1, v=0. A<B and A<=B will be false |
 | CMPEQ | 0 |Since A-B=2,z=0 and A==B will be false |
+<br>
 
 ### CASE_5
 A : 1111 1111 1111 1111 = -1
@@ -84,7 +115,7 @@ B : 1111 1111 1111 1111 = -1
 | SHA | 1111111111111111 | Maximum we can shift A right is 15 bits as we consider last 4 bits of B only. Since MSB of A=1, it still shifts right by 1 bit but we pad it with 1, thus is appears the same |
 | CMPEQ/CMPLE | 1 | A-B=0, z=1. Thus A==B and A<=B will be true |
 | CMPLT| 0 | A-B=0. MSB of Output=0 so n=0 and since MSB of A=0 and MSB of B=-1, v=0. so A<B will be false |
-
+<br>
 
 ### CASE_6
 A : 1000 0000 0000 0000 = -32768
@@ -97,8 +128,10 @@ B : 0111 1111 1111 1111 = 32767
 | SHR | 0000000000000001| Maximum we can shift A right is 15 bits as we consider last 4 bits of B only |
 | SHA | 1111111111111111 |Maximum we can shift A right is 15 bits as we consider last 4 bits of B only. Since MSB of A=1, it still shifts right by 1 bit but we pad it with 1, thus is appears as all 1s |
 | CMPLT | 1 | For A-B, MSB of A,-B =1 whereas MSB of Output = 0, so v =1 while n=0. So A<B and A<=B will both be true |
+<br>
 
 # Full Test Case 
+The test cases used to simulate the "incorrect output" error in the auto tester are marked with a * in their respective ALUFN/Output tables.<br><br>
 ### CASE_1
 A : 0000 0000 0000 0000 = 0
 B : 0000 0000 0000 0000 = 0
@@ -123,6 +156,7 @@ B : 0000 0000 0000 0000 = 0
 |CMPEQ |0000 0000 0000 0001
 |CMPLT |0000 0000 0000 0000
 |CMPLE |0000 0000 0000 0001
+<br>
 
 ### CASE_2
 A : 1111 1111 1111 1111 = -1
@@ -130,8 +164,8 @@ B : 0000 0000 0000 0001 = 1
 |ALUFN|OUTPUT  |
 |--|--|
 |ADD|0000 0000 0000 0000
-|SUB|1111 1111 1111 1110
-|MUL|1111 1111 1111 1111
+|SUB*|1111 1111 1111 1110
+|MUL*|1111 1111 1111 1111
 |A|1111 1111 1111 1111
 |XOR|1111 1111 1111 1110
 |OR|1111 1111 1111 1111
@@ -148,6 +182,7 @@ B : 0000 0000 0000 0001 = 1
 |CMPEQ|0000 0000 0000 0000
 |CMPLT|0000 0000 0000 0001
 |CMPLE|0000 0000 0000 0001
+<br>
 
 ### CASE_3
 A : 1010 0101 1100 0011 = -23101
@@ -172,7 +207,8 @@ B : 1111 0000 1010 0101 = -3931
 |SHA|1111 1101 0010 1110
 |CMPEQ|0000 0000 0000 0000
 |CMPLT|0000 0000 0000 0001
-|CMPLE|0000 0000 0000 0001
+|CMPLE*|0000 0000 0000 0001
+<br>
 
 ### CASE_4
 A : 0000 0000 0001 1001 = 25
@@ -191,13 +227,14 @@ B : 0000 0000 0001 0111 = 23
 |!B|1111 1111 1110 1000
 |NAND|1111 1111 1110 1110
 |NOR|1111 1111 1110 0000
-|NXOR|1111 1111 1111 0001
+|NXOR*|1111 1111 1111 0001
 |SHL|0000 1100 1000 0000
 |SHR|0000 0000 0000 0000
 |SHA|0000 0000 0000 0000
 |CMPEQ|0000 0000 0000 0000
 |CMPLT|0000 0000 0000 0000
 |CMPLE|0000 0000 0000 0000
+<br>
 
 ### CASE_5
 A : 1111 1111 1111 1111 = -1
@@ -217,12 +254,13 @@ B : 1111 1111 1111 1111 = -1
 |NAND|0000 0000 0000 0000
 |NOR|0000 0000 0000 0000
 |NXOR|1111 1111 1111 1111
-|SHL|0000 0000 0000 0000
+|SHL*|0000 0000 0000 0000
 |SHR|0000 0000 0000 0001
 |SHA|1111 1111 1111 1111
 |CMPEQ|0000 0000 0000 0001
 |CMPLT|0000 0000 0000 0000
 |CMPLE|0000 0000 0000 0001
+<br>
 
 ### CASE_6
 A : 1000 0000 0000 0000 = -32768
