@@ -1,0 +1,41 @@
+module error_checker (
+    input new_a[16],
+    input new_b[16],
+    input new_alufn[6],
+    input clk,  // clock
+    input rst,  // reset
+    output alufn[6],
+    output a[16],
+    output b[16]
+  ) {
+  
+  .clk(clk) {
+    .rst(rst) {
+      dff stored_alufn[6](#INIT(0));
+      dff stored_a[16](#INIT(0));
+      dff stored_b[16](#INIT(0));
+      
+      }
+  }
+
+  always {
+  
+    // this module helps to separate the storage of A, B and ALUFN values
+    // from the rest of the main logic in the au_top.luc file.
+    
+    // the latest A, B and ALUFN values from manual testing or auto testing modes are
+    // stored in the dffs in this module so that these values can be used to compute the 
+    // correct output fo the error checking mode.
+    
+    // a feedback loop is used to maintain the A, B and ALUFN signals since there is no new input
+    // this loop is implemented in au_top.luc
+    
+    stored_a.d = new_a;
+    stored_b.d = new_b;
+    stored_alufn.d = new_alufn;
+    
+    a = stored_a.q;
+    b = stored_b.q;
+    alufn = stored_alufn.q;
+
+}

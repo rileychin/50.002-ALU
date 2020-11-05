@@ -12,23 +12,33 @@ module au_top (
     input io_dip [3][8]     // DIP switches on IO Shield
   ) {
   
-  sig rst, force_out[16], zed[8], ved[8],ned[8];                  
+  const NUMBER_TO_7SEG = {h06, h05, h04, h03, h02, h01};  // for displaying test case number in 7 segment
+  sig rst, actual_output[16], a[16], b[16], alufn[6], expected_output[16], case_number[8];  // temporary variables                
   
+  // ALU MODULES
   sixteen_bit_adder alu_adder;
   sixteen_bit_boolean alu_boole;
   comparator alu_cmp;
   shifter alu_shift; 
   multiplier alu_mul;
-  //input_module in(.clk(slowclock.value), .rst(rst));
-  input_module in(.clk(clk), .rst(rst));
+  
+  
   .clk(clk) {
-    // The reset conditioner is used to synchronize the reset signal to the FPGA
-    // clock. This ensures the entire FPGA comes out of reset at the same time.
+    // synchronizes reset for all components
     reset_conditioner reset_cond;
+    // triggers button press event only once
     button_conditioner buttoncond[4];
     edge_detector buttondetector[4](#RISE(1), #FALL(0));
+    
     .rst(rst) {
       multi_seven_seg seg;
+      
+      // 3 MODES FOR TESTING: MANUAL, AUTO, ERROR CHECKING; WITH FSM TO SWITCH BETWEEN MODES
+      manual_tester manual;
+      auto_tester auto;
+      error_checker error_check;
+      
+      fsm switch_tester(#INIT(MANUAL)) = {MANUAL,AUTO,ERROR};
     }
   }
 
@@ -47,7 +57,8 @@ module au_top (
     io_sel = 4hf;           // select no digits
     customout = b000;
     
-    // INITIALIZE INPUTS
+    // INITIALIZE ALU MODULE INPUTS
+    
     alu_adder.x = b0;
     alu_adder.y = b0;
     alu_adder.cin = b0;
@@ -68,133 +79,309 @@ module au_top (
     alu_mul.a = b0;
     alu_mul.b = b0;
     
-    //INITIALIZE 7 SEG BITS DEFAULT ALL TO empty 
+    // INITIALIZE TESTING MODE MODULE INPUT
+    
+    manual.dip_input = b0;
+    manual.btn_input = b0;
+    
+    auto.start = b0;
+    
+    //INITIALIZE 7 SEG BITS: DEFAULT ALL TO EMPTY
     seg.values = {8h10,8h10,8h10,8h10};
    
+    // INITIALIZE TEMPORARY VARIABLES
+    actual_output = 16b0000000000000000;
+    expected_output = 16b0;
+    alufn = b0;
+    a = b0;
+    b = b0;
+    case_number = 8h10;
     
-    //INITIALIZE force_out bit;
-    force_out = 16b0000000000000000;
     
-    // RECEIVING INPUT
+    // RECEIVING INPUT: BUTTONS
     
-    //manual input tester BUTTON 0
+    // BUTTON 0: USED WITHIN MANUAL_TESTER.LUC TO SWITCH BETWEEN MANUAL INPUT STATES
     buttoncond.in[0] = io_button[0];
     buttondetector.in[0] = buttoncond.out[0];
-    in.btn_input_0 = buttondetector.out[0];
     
-    //auto tester BUTTON 1
+    // BUTTON 1: USED TO ENTER AUTO TESTING MODE (switch_tester.AUTO)
     buttoncond.in[1] = io_button[1];
     buttondetector.in[1] = buttoncond.out[1];
-    in.btn_input_1 = buttondetector.out[1];
     
-    //error checker for valid in --> invalid output BUTTON 2
+    // BUTTON 2: USED TO ENTER ERROR CHECKING MODE (switch_tester.ERROR)
     buttoncond.in[2] = io_button[2];
     buttondetector.in[2] = buttoncond.out[2];
-    in.btn_input_2 = buttondetector.out[2];
     
-    //state switch input BUTTON 3
+    // BUTTON 3: USED TO ENTER MANUAL TESTING MODE (switch_tester.MANUAL)
     buttoncond.in[3] = io_button[3];
     buttondetector.in[3] = buttoncond.out[3];
-    in.btn_input_3 = buttondetector.out[3];
-    
-    in.dip_input[7:0] = io_dip[0];
-    in.dip_input[15:8] = io_dip[1];
-    io_led[2][1:0] = in.state;
-    io_led[2][7:2] = in.alufn[5:0];  // 00: adder/multiplier, 01: boole, 10: shifter, 11: comparator
     
     
-    case (in.alufn[5:4]) {
-      b00:  // adder or multiplier
+    // DETERMINE TESTING MODE: AUTO, ERROR OR MANUAL
+    case (switch_tester.q) {
+      // MODE: AUTO
+      switch_tester.AUTO:
       
+        // set temporary variables to the output of the auto_tester module
+        a = auto.a;
+        b = auto.b;
+        alufn = auto.alufn;
+        expected_output = auto.expected_out;  // to compare with actual output later
+        case_number = NUMBER_TO_7SEG[auto.case_number-1];  // for displaying which a,b pair is currently being tested on 7 seg
+        
+        // display the current ALUFN using io_led[2][7:2]
+        io_led[2][7:2] = alufn;
+        
+        // display Err on 7 segment if there is an invalid/unsupported ALUFN 
+        if (auto.invalid_alufn == b1) {
+          seg.values = {case_number,8h0E,8h0F,8h0F};
+        }
+        
+        // check whether BUTTON 2 or BUTTON 3 were pressed
+        // change state to ERROR or MANUAl mode if the respective buttons were presssed
+        if (buttondetector.out[2] == 1) {
+          switch_tester.d = switch_tester.ERROR;
+        }
+        else if (buttondetector.out[3] == 1) {
+          switch_tester.d = switch_tester.MANUAL;
+        }
+      
+      // MODE: ERROR
+      switch_tester.ERROR: 
+      
+        // set temporary variables to the output of the error_checker module
+        // this helps to create a kind of feedback loop to maintain the values of A, B and ALUFN
+        // in error checking mode since there is no new input
+        a = error_check.a;
+        b = error_check.b; 
+        alufn = error_check.alufn;
+        
+        // check whether BUTTON 1 or BUTTON 3 were pressed
+        // change state to AUTO or MANUAl mode if the respective buttons were presssed
+        if (buttondetector.out[1] == 1) {
+          switch_tester.d = switch_tester.AUTO;
+          auto.start = b1;
+        }
+        else if (buttondetector.out[3] == 1) {
+          switch_tester.d = switch_tester.MANUAL;
+        }
+        
+      // MODE: MANUAL
+      switch_tester.MANUAL:
+      
+        // pass io_dip and BUTTON 0 input values as input to manual_tester module
+        manual.dip_input[7:0] = io_dip[0];
+        manual.dip_input[15:8] = io_dip[1];
+        manual.btn_input = buttondetector.out[0];  
+        
+        // set temporary variables to the output of the manual_tester module
+        a = manual.a;
+        b = manual.b;
+        alufn = manual.alufn;  
+        
+        // set io_led[2][1:0] to display the current input state of the manual tester
+        io_led[2][1:0] = manual.state;
+        
+        // check whether BUTTON 1 or BUTTON 2 were pressed
+        // change state to AUTO or ERROR mode if the respective buttons were presssed
+        if (buttondetector.out[2] == 1) {
+          switch_tester.d = switch_tester.ERROR;
+        }
+        else if (buttondetector.out[1] == 1) {
+          switch_tester.d = switch_tester.AUTO;
+          auto.start = b1;
+        }
+    }
+    
+    // STORE VALUES OF A, B AND ALUFN IN ERROR_CHECKER AT EACH CLOCK CYCLE
+    error_check.new_a = a;
+    error_check.new_b = b;
+    error_check.new_alufn = alufn;
+    
+    
+    // SELECTING WHICH ALU MODULE OUTPUT TO USE USING ALUFN[5:4]
+    case (alufn[5:4]) {
+      b00:  // ADDER/MULTIPLIER
        // ADD: 000000; SUB: 000001; MUL: 000010
-       if (in.alufn[3:1] == b000) {
-         seg.values = {8h10,8h10,8h10,8h0A};
-         alu_adder.x = in.a;
-         alu_adder.y = in.b;
-         alu_adder.cin = in.alufn[0];
-         io_led[0] = alu_adder.s[7:0];
-         io_led[1] = alu_adder.s[15:8];
-         force_out[15:8] = alu_adder.s[15:8];
-         force_out[7:0] = alu_adder.s[7:0];
-       } else if (in.alufn[3:0] == b0010) {
-         seg.values = {8h10,8h10,8h10,8h0A};
-         alu_mul.a = in.a;
-         alu_mul.b = in.b;
-         io_led[1] = alu_mul.out[15:8];
-         io_led[0] = alu_mul.out[7:0];
-         force_out[15:8] = alu_mul.out[15:8];
-         force_out[7:0] = alu_mul.out[7:0];
-       }
-       else {
-        seg.values = {8h10,8h0E,8h0F,8h0F};
-       }
-                 
-      b01:  // boole
-      
-        // A: 011010; XOR: 010110; OR: 011110; AND: 011000; NOTA:010101; B:011100; NOTB: 010011; NAND: 010111; NOR: 010001; NXOR: 011001;
-        if (in.alufn[3:0] == b1010 || in.alufn[3:0] == b0110 || in.alufn[3:0] == b1110 || in.alufn[3:0] == b1000 || in.alufn[3:0] == b0101||in.alufn[3:0] == b1100 || in.alufn[3:0] == b0011 || in.alufn[3:0] == b0111 || in.alufn[3:0] == b0001 || in.alufn[3:0] == b1001) {
-          seg.values = {8h10,8h10,8h10,8h0B};
-          alu_boole.a = in.a;
-          alu_boole.b = in.b;
-          alu_boole.alufn = in.alufn[3:0];
-          io_led[0] = alu_boole.out[7:0];
-          io_led[1] = alu_boole.out[15:8];
-          force_out[15:8] = alu_boole.out[15:8];
-          force_out[7:0] = alu_boole.out[7:0];
+      if (alufn[3:1] == b000) {
+        // VALID ALUFN: ADDER IS SELECTED
+        // display the selected operation as adder/multiplier with A on the 7 segment
+        seg.values = {case_number,8h10,8h10,8h0A};
+        
+        // check whether current a,b pair is the hardcoded error case for adder module
+        if (switch_tester.q == switch_tester.AUTO && alufn[0] == b1 && a == 16b1111111111111111 && b == 16b0000000000000001) {
+          // deliberately display wrong output in auto tester
+          // CASE 2, SUB
+          actual_output = 16b0111111111111110;  
         } else {
-          seg.values = {8h10,8h0E,8h0F,8h0F};
+          // setting input
+          alu_adder.x = a;
+          alu_adder.y = b;
+          alu_adder.cin = alufn[0];
+          // setting output  
+          actual_output = alu_adder.s;
+        }
+        
+        // setting output
+        io_led[0] = actual_output[7:0];
+        io_led[1] = actual_output[15:8];
+        
+      } 
+      else if (alufn[3:0] == b0010) {
+        // VALID ALUFN: MULTIPLIER IS SELECTED
+        // display the selected operation as adder/multiplier with A on the 7 segment
+        seg.values = {case_number,8h10,8h10,8h0A};
+
+        // check whether current a,b pair is the hardcoded error case for multiplier module
+        if (switch_tester.q == switch_tester.AUTO && a == 16b1111111111111111 && b == 16b0000000000000001) {
+          // deliberately display wrong output in auto tester
+          // CASE 2, MUL
+          actual_output = 16b0111111111111111;  
+        } else {
+          // setting input
+          alu_mul.a = a;
+          alu_mul.b = b;
+          // setting output  
+          actual_output = alu_mul.out;
+        }
+        
+        // setting output
+        io_led[0] = actual_output[7:0];
+        io_led[1] = actual_output[15:8];
+      }
+      else {
+        // INVALID ALUFN
+        seg.values = {case_number,8h0E,8h0F,8h0F};
+      }
+                 
+      b01:  // BOOLEAN
+        // A: 011010; XOR: 010110; OR: 011110; AND: 011000; NOTA:010101; B:011100; NOTB: 010011; NAND: 010111; NOR: 010001; NXOR: 011001;
+        if (alufn[3:0] == b1010 || alufn[3:0] == b0110 || alufn[3:0] == b1110 || alufn[3:0] == b1000 || alufn[3:0] == b0101||alufn[3:0] == b1100 || alufn[3:0] == b0011 || alufn[3:0] == b0111 || alufn[3:0] == b0001 || alufn[3:0] == b1001) {
+          // VALID ALUFN
+          // display the selected operation as boolean with b on the 7 segment
+          seg.values = {case_number,8h10,8h10,8h0B};
+
+          // check whether current a,b pair is the hardcoded error case for boolean module
+          if (switch_tester.q == switch_tester.AUTO && alufn[3:0] == b1001 && a == 16b0000000000011001 && b == 16b0000000000010111) {
+            // deliberately display wrong output in auto tester
+            // CASE 4, NXOR
+            actual_output = 16b0111111111110001;  
+          } else {
+            // setting input
+            alu_boole.a = a;
+            alu_boole.b = b;
+            alu_boole.alufn = alufn[3:0];
+            // setting output  
+            actual_output = alu_boole.out;
+          }
+          
+          // setting output
+          io_led[0] = actual_output[7:0];
+          io_led[1] = actual_output[15:8];
+          
+        } else {
+          // INVALID ALUFN
+          seg.values = {case_number,8h0E,8h0F,8h0F};
 
         }
         
-        
-      b10:  // shifter
+      b10:  // SHIFTER
        // SHL: 100000; SHR: 100001; SRA: 100011
-       if (in.alufn[3:2] == b00 && in.alufn[1:0] != b10) {
-         seg.values = {8h10,8h10,8h10,8h0D};
-         alu_shift.a = in.a;
-         alu_shift.b = in.b;
-         alu_shift.alufn = in.alufn;
-         io_led[1] = alu_shift.s[15:8];
-         io_led[0] = alu_shift.s[7:0];
-         force_out[15:8] = alu_shift.s[15:8];
-         force_out[7:0] = alu_shift.s[7:0];
-       } else {
-         seg.values = {8h10,8h0E,8h0F,8h0F};
-       }
-        
-        
-      b11:  // comparator
-        // CMPEQ: 110011; CMPLT: 110101; CMPLE: 110111
-        
-         if (in.alufn[3:0] == b0011 || in.alufn[3:0] == b0101 || in.alufn[3:0] == b0111){
-          zed = alu_adder.z;  // output value of z (0 or 1) on 7 segment
-          ved = alu_adder.v;  // output value of v (0 or 1) on 7 segment
-          ned = alu_adder.n;  // output value of n (0 or 1) on 7 segment
-          seg.values = {zed,ved,ned,8h0C};
-          alu_adder.x = in.a;
-          alu_adder.y = in.b;
-          alu_adder.cin = in.alufn[0];
-          
-          alu_cmp.z = alu_adder.z;
-          alu_cmp.v = alu_adder.v;
-          alu_cmp.n = alu_adder.n;
+        if (alufn[3:2] == b00 && alufn[1:0] != b10) {
+          // VALID ALUFN
+          // display the selected operation as shifter with S on the 7 segment
+          seg.values = {case_number,8h10,8h10,8h0D};
 
-          alu_cmp.alufn = in.alufn[2:1];
-          io_led[0][0] = alu_cmp.out; //true false value only 
-          force_out = alu_cmp.out;
+          // check whether current a,b pair is the hardcoded error case for shifter module
+          if (switch_tester.q == switch_tester.AUTO && alufn[3:0] == b0000 && a == 16b1111111111111111 && b == 16b1111111111111111) {
+            // deliberately display wrong output in auto tester
+            // CASE 5, SHL
+            actual_output = 16b0000000000000000;  
+          } else {
+            // setting input
+            alu_shift.a = a;
+            alu_shift.b = b;
+            alu_shift.alufn = alufn;
+            // setting output  
+            actual_output = alu_shift.s;
+          }
+          
+          // setting output
+          io_led[0] = actual_output[7:0];
+          io_led[1] = actual_output[15:8];
+
         } else {
-          seg.values = {8h10,8h0E,8h0F,8h0F};
-      
+          // invalid ALUFN
+          seg.values = {case_number,8h0E,8h0F,8h0F};
+        }
+        
+        
+      b11:  // COMPARATOR
+        // CMPEQ: 110011; CMPLT: 110101; CMPLE: 110111
+        if (alufn[3:0] == b0011 || alufn[3:0] == b0101 || alufn[3:0] == b0111){
+          // VALID ALFUN
+          // display the selected operation as comparator with C 
+          seg.values = {case_number,8h10,8h10,8h0C};
+
+          // check whether current a,b pair is the hardcoded error case for comparator module
+          if (switch_tester.q == switch_tester.AUTO && alufn[3:0] == b0111 && a == 16b1010010111000011 && b == 16b1111000010100101) {
+            // deliberately display wrong output in auto tester
+            // CASE 3, CMPLE
+            actual_output = b0;  
+          } else {
+            // setting adder input
+            alu_adder.x = a;
+            alu_adder.y = b;
+            alu_adder.cin = alufn[0];
+            
+            // setting Z, V, N output from adder as input to comparator
+            alu_cmp.z = alu_adder.z;
+            alu_cmp.v = alu_adder.v;
+            alu_cmp.n = alu_adder.n;
+            
+            // setting ALUFN input to comparator
+            alu_cmp.alufn = alufn[2:1];
+
+            // setting output  
+            actual_output = alu_cmp.out;
+          }
+          
+          // setting output from comparator
+          io_led[0][0] = actual_output[0]; //true false value only 
+          
+        } else {
+          // invalid ALUFN
+          seg.values = {case_number,8h0E,8h0F,8h0F};
         }
         
     }
     
+    // ERROR CHECKING LOGIC
     // checking for error while in error checking mode
     // checking that io_dip[2:1] input matches output from the previously entered A and B inputs
-    if (in.error_state == b1 && (force_out[15:8] != io_dip[2] || force_out[7:0] != io_dip[1])){
-      seg.values = {8h10,8h0E,8h0F,8h0F};
+    if (switch_tester.ERROR == switch_tester.q ){
+      // display E on rightmost 7 segment to indicate error checking mode
+      seg.values = {case_number, 8h10, 8h10, 8h0E};   
+      if (actual_output[15:8] != io_dip[2] || actual_output[7:0] != io_dip[1]) {
+        // display Err on 7 segments when io_dip[2:1] does not match output
+        seg.values = {case_number,8h0E,8h0F,8h0F};
+      }
     }
     
+
+    // AUTO TESTER LOGIC
+    // WHEN AUTO TESTER MODE IS ON, SET io_led[2][1:0] TO INDICATE WHETHER EXPECTED OUTPUT MATCHES ACTUAL OUTPUT
+    if (switch_tester.q == switch_tester.AUTO && auto.invalid_alufn != b1) {
+      if (expected_output == actual_output) {
+        // CORRECT: LED ON THE RIGHT LIGHTS UP
+        io_led[2][0] = b1;
+      } else {
+        // WRONG: LED ON THE LEFT LIGHTS UP
+        io_led[2][1] = b1;
+      }
+    }
+    
+    // SETTING 7 SEGMENT
     io_seg = ~seg.seg;   // connect segments to counter
     io_sel = ~seg.sel; // connect digit select to counter
     

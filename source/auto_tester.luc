@@ -1,0 +1,224 @@
+module auto_tester (
+    input clk,  // clock
+    input rst,  // reset
+    input start,  // auto-testing reset indicator
+    output a[16],
+    output b[16],
+    output alufn[6],
+    output expected_out[16],
+    output invalid_alufn,  // error bit for when alufn is invalid
+    output case_number[3]  // test case number to be displayed on 7 segment
+  ) {
+  
+  // TEST CASES FOR AUTO TESTING
+  // 6 A,B PAIRS LOOPED THROUGH 19 VALID ALUFN AND 1 INVALID ALUFN
+  // SPECIAL TEST CASES HAVE BEEN RECORDED IN THE readme.md FILE
+  // 5 SPECIFIC CASES WERE HARDCODED TO GIVE INCORRECT OUTPUT IN au_top.luc
+  // THESE CASES ARE: 
+    // CASE_2 SUB
+    // CASE_2 MUL
+    // CASE_3 CMPLE
+    // CASE_4 NXOR
+    // CASE_5 SHL
+  const AUTO_A = {16b0000000000000000 /* CASE_1 */, 16b1111111111111111 /* CASE_2 */, 16b1010010111000011 /* CASE_3 */, 16b0000000000011001 /* CASE_4 */, 16b1111111111111111 /* CASE_5 */, 16b1000000000000000 /* CASE_6 */};
+  const AUTO_B = {16b0000000000000000 /* CASE_1 */, 16b0000000000000001 /* CASE_2 */, 16b1111000010100101 /* CASE_3 */, 16b0000000000010111 /* CASE_4 */, 16b1111111111111111 /* CASE_5 */, 16b0111111111111111 /* CASE_6 */};
+  const EXPECTED_OUT = {
+  /* CASE_1 */  {16b0000000000000000, 16b0000000000000000, 16b0000000000000000, 16b0000000000000000, 16b0000000000000000, 16b0000000000000000, 16b0000000000000000, 16b1111111111111111, 16b0000000000000000, 16b1111111111111111, 16b1111111111111111, 16b1111111111111111, 16b1111111111111111, 16b0000000000000000, 16b0000000000000000, 16b0000000000000000, 16b0000000000000001, 16b0000000000000000, 16b0000000000000001},
+  /* CASE_2 */  {16b0000000000000000, 16b1111111111111110, 16b1111111111111111, 16b1111111111111111, 16b1111111111111110, 16b1111111111111111, 16b0000000000000001, 16b0000000000000000, 16b0000000000000001, 16b1111111111111110, 16b1111111111111110, 16b0000000000000000, 16b0000000000000001, 16b1111111111111110, 16b0111111111111111, 16b1111111111111111, 16b0000000000000000, 16b0000000000000001, 16b0000000000000001},
+  /* CASE_3 */  {16b1001011001101000, 16b1011010100011110, 16b1010011010101111, 16b1010010111000011, 16b0101010101100110, 16b1111010111100111, 16b1010000010000001, 16b0101101000111100, 16b1111000010100101, 16b0000111101011010, 16b0101111101111110, 16b0000101000011000, 16b1010101010011001, 16b1011100001100000, 16b0000010100101110, 16b1111110100101110, 16b0000000000000000, 16b0000000000000001, 16b0000000000000001},
+  /* CASE_4 */  {16b0000000000110000, 16b0000000000000010, 16b0000001000111111, 16b0000000000011001, 16b0000000000001110, 16b0000000000011111, 16b0000000000010001, 16b1111111111100110, 16b0000000000010111, 16b1111111111101000, 16b1111111111101110, 16b1111111111100000, 16b1111111111110001, 16b0000110010000000, 16b0000000000000000, 16b0000000000000000, 16b0000000000000000, 16b0000000000000000, 16b0000000000000000},
+  /* CASE_5 */  {16b1111111111111110, 16b0000000000000000, 16b0000000000000001, 16b1111111111111111, 16b0000000000000000, 16b1111111111111111, 16b1111111111111111, 16b0000000000000000, 16b1111111111111111, 16b0000000000000000, 16b0000000000000000, 16b0000000000000000, 16b1111111111111111, 16b1000000000000000, 16b0000000000000001, 16b1111111111111111, 16b0000000000000001, 16b0000000000000000, 16b0000000000000001},
+  /* CASE_6 */  {16b1111111111111111, 16b0000000000000001, 16b1000000000000000, 16b1000000000000000, 16b1111111111111111, 16b1111111111111111, 16b0000000000000000, 16b0111111111111111, 16b0111111111111111, 16b1000000000000000, 16b1111111111111111, 16b0000000000000000, 16b0000000000000000, 16b0000000000000000, 16b0000000000000001, 16b1111111111111111, 16b0000000000000000, 16b0000000000000001, 16b0000000000000001}};
+
+  // for slowing the clock for fsm
+  counter slowclock(#SIZE(1),#DIV(27), .clk(clk), .rst(rst));
+  edge_detector slowClockEdge(.clk(clk));
+  
+  .clk(clk), .rst(rst) {
+    dff stored_alufn_auto[6](#INIT(0));
+    dff stored_a[16](#INIT(AUTO_A[5]));
+    dff stored_b[16](#INIT(AUTO_B[5]));
+    dff stored_i[3](#INIT(5));
+    dff stored_j[5](#INIT(18));
+    
+    fsm current_ab(#INIT(CASE_1)) = {CASE_1, CASE_2, CASE_3, CASE_4, CASE_5, CASE_6};
+    fsm alufn_op = {A_ADD,A_SUB,A_MUL,B_A,B_XOR,B_OR,B_AND,B_NOTA,B_B,B_NOTB,B_NAND,B_NOR,B_XNOR,S_SHL,S_SHR,S_SRA,C_CMPEQ,C_CMPLT,C_CMPLE,E_ERROR};
+  }
+
+  always {
+  
+    slowClockEdge.in = slowclock.value;    // using edge detector to slow the clock
+  
+    // initializing input
+    stored_a.d = stored_a.q;
+    stored_b.d = stored_b.q;
+    invalid_alufn = b0;
+    
+    if (start == b1) {
+      // reset auto tester when io_button[1] is pressed
+      alufn_op.d = alufn_op.A_ADD;
+      current_ab.d = current_ab.CASE_1;
+    } 
+    else {
+ 
+      if (slowClockEdge.out == b1) {    // using edge detector to slow the clock
+        
+        // using fsm to loop through 19 valid + 1 invalid ALUFNs every slow clock cycle
+        case(alufn_op.q){
+          alufn_op.A_ADD: 
+            stored_alufn_auto.d = b000000;    // set ALUFN 
+            alufn_op.d = alufn_op.A_SUB;      // set next state
+            stored_j.d = 18;                  // set index for selecting expected_out later
+            
+            // using fsm to loop change the values of A and B at the start of each cycle through the ALUFNs
+            case (current_ab.q) {
+              current_ab.CASE_1:
+                stored_a.d = AUTO_A[5];  // set A
+                stored_b.d = AUTO_B[5];  // set B             
+                stored_i.d = 5;          // set index for selecting expected_out later
+              current_ab.CASE_2:
+                stored_a.d = AUTO_A[4];
+                stored_b.d = AUTO_B[4]; 
+                stored_i.d = 4;
+              current_ab.CASE_3:
+                stored_a.d = AUTO_A[3];
+                stored_b.d = AUTO_B[3]; 
+                stored_i.d = 3;
+              current_ab.CASE_4:
+                stored_a.d = AUTO_A[2];
+                stored_b.d = AUTO_B[2];
+                stored_i.d = 2;
+              current_ab.CASE_5:
+                stored_a.d = AUTO_A[1];
+                stored_b.d = AUTO_B[1]; 
+                stored_i.d = 1;
+              current_ab.CASE_6:
+                stored_a.d = AUTO_A[0];
+                stored_b.d = AUTO_B[0];  
+                stored_i.d = 0;
+            }
+            
+          alufn_op.A_SUB:
+            stored_alufn_auto.d = b000001;
+            alufn_op.d = alufn_op.A_MUL;
+            stored_j.d = 17;
+            
+          alufn_op.A_MUL:
+            stored_alufn_auto.d = b000010;
+            alufn_op.d = alufn_op.B_A;
+            stored_j.d = 16;
+            
+          alufn_op.B_A:
+            stored_alufn_auto.d = b011010;
+            alufn_op.d =alufn_op.B_XOR;
+            stored_j.d = 15;
+          
+          alufn_op.B_XOR:
+            stored_alufn_auto.d = b010110;
+            alufn_op.d = alufn_op.B_OR;
+            stored_j.d = 14;
+          
+          alufn_op.B_OR:
+            stored_alufn_auto.d = b011110;
+            alufn_op.d = alufn_op.B_AND;
+            stored_j.d = 13;
+            
+          alufn_op.B_AND:
+            stored_alufn_auto.d = b011000;
+            alufn_op.d = alufn_op.B_NOTA;
+            stored_j.d = 12;
+            
+          alufn_op.B_NOTA:
+            stored_alufn_auto.d = b010101;
+            alufn_op.d = alufn_op.B_B;
+            stored_j.d = 11;
+            
+          alufn_op.B_B:
+            stored_alufn_auto.d = b011100;
+            alufn_op.d = alufn_op.B_NOTB;
+            stored_j.d = 10;
+            
+          alufn_op.B_NOTB:
+            stored_alufn_auto.d = b010011;
+            alufn_op.d = alufn_op.B_NAND;
+            stored_j.d = 9;
+          
+          alufn_op.B_NAND:
+            stored_alufn_auto.d = b010111;
+            alufn_op.d = alufn_op.B_NOR;
+            stored_j.d = 8;
+          
+          alufn_op.B_NOR:
+            stored_alufn_auto.d = b010001;
+            alufn_op.d = alufn_op.B_XNOR;
+            stored_j.d = 7;
+          
+          alufn_op.B_XNOR:
+            stored_alufn_auto.d = b011001;
+            alufn_op.d = alufn_op.S_SHL;
+            stored_j.d = 6;
+            
+          alufn_op.S_SHL:
+            stored_alufn_auto.d = b100000;
+            alufn_op.d = alufn_op.S_SHR;
+            stored_j.d = 5;
+            
+          alufn_op.S_SHR:
+            stored_alufn_auto.d = b100001;
+            alufn_op.d = alufn_op.S_SRA;
+            stored_j.d = 4;
+            
+          alufn_op.S_SRA:
+            stored_alufn_auto.d = b100011;
+            alufn_op.d = alufn_op.C_CMPEQ;
+            stored_j.d = 3;
+            
+          alufn_op.C_CMPEQ:
+            stored_alufn_auto.d = b110011;
+            alufn_op.d = alufn_op.C_CMPLT;
+            stored_j.d = 2;
+            
+          alufn_op.C_CMPLT:
+            stored_alufn_auto.d = b110101;
+            alufn_op.d = alufn_op.C_CMPLE;
+            stored_j.d = 1;
+            
+          alufn_op.C_CMPLE:
+            stored_alufn_auto.d = b110111;
+            alufn_op.d = alufn_op.E_ERROR;
+            stored_j.d = 0;
+            
+          //error test for 111111 => invalid ALUFN
+          alufn_op.E_ERROR:
+            stored_alufn_auto.d = b111111;
+            alufn_op.d = alufn_op.A_ADD;
+            invalid_alufn = b1;    // set error bit output to 1 when ALUFN is invalid
+            
+            // at the end of each cycle through the ALUFNs, move to the next state of A/B input (ie. next test case)
+            case (current_ab.q) {
+              current_ab.CASE_1:
+                current_ab.d = current_ab.CASE_2;
+              current_ab.CASE_2:
+                current_ab.d = current_ab.CASE_3;  
+              current_ab.CASE_3:
+                current_ab.d = current_ab.CASE_4;
+              current_ab.CASE_4:
+                current_ab.d = current_ab.CASE_5;
+              current_ab.CASE_5:
+                current_ab.d = current_ab.CASE_6; 
+              current_ab.CASE_6:
+                current_ab.d = current_ab.CASE_1;
+            }
+        }
+      }
+      
+    }
+  
+    // setting output
+    a = stored_a.q;
+    b = stored_b.q;
+    alufn = stored_alufn_auto.q;
+    expected_out = EXPECTED_OUT[stored_i.q][stored_j.q];  // use the previously set index to select the corresponding expected output
+    case_number = 6 - stored_i.q;  // case number to be displayed on the 7 segment in au_top
+  }
+}

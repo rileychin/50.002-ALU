@@ -1,0 +1,80 @@
+module manual_tester (
+    input btn_input,
+    input dip_input[16],
+    input clk,  // clock
+    input rst,  // reset
+    output a[16],
+    output b[16],
+    output alufn[6],
+    output state[2]
+  ) {
+  
+  /*
+     MANUAL MODE INPUT FORMAT
+     
+     io_dip[1:0] => used to enter 16 bits of a and b (io_dip[1][7] = MSB, io_dip[0][0] = LSB)
+     io_dip[0][5:0] => used to enter 6 bits of alufn
+     io_button[0] => used as a "next" button. goes from ENTER_A to ENTER_B to ENTER_ALUFN back to ENTER_A
+     
+     MANUAL MODE OUTPUT FORMAT
+     
+     io_led[1:0] => displays the result of the operation on a and b (note: comparator only uses io_led[0][0])
+     io_led[2][1:0] => displays the state that the machine is in
+       01: ENTER_A
+       10: ENTER_B
+       11: ENTER_ALUFN
+     
+     Note that the output from io_led[1:0] uses a default alufn = 000000 (ADD) until alufn has been entered.
+     Only after entering all 3 values in each round of manual testing will the output be meaningful. 
+     (state = 01 will be showing on the LEDs when output is meaningful)
+  */
+  
+  .clk(clk), .rst(rst) {
+    dff stored_alufn[6](#INIT(0));
+    dff stored_a[16](#INIT(0));
+    dff stored_b[16](#INIT(0));
+    fsm brain= {ENTER_A, ENTER_B, ENTER_ALUFN};
+  }
+
+  always {     
+    state = b0;   // initialise state: ENTER_A = b01; ENTER_B = b10; ENTER_ALUFN = b11;
+
+    case (brain.q) {
+      brain.ENTER_A:      // setting input A
+        state = b01;      // set state for display on LED output
+        if (btn_input) {
+          // we only assign dip_input value and move to next state on button press
+          stored_a.d = dip_input;    
+          brain.d = brain.ENTER_B;   
+        } else {
+          // if the io_button[0] is not pressed, we remain at the current state
+          brain.d = brain.ENTER_A;
+        }
+      
+      brain.ENTER_B:      // setting input B
+        state = b10;
+        if (btn_input) {
+          stored_b.d = dip_input;
+          brain.d = brain.ENTER_ALUFN;
+        } else {
+          brain.d = brain.ENTER_B;
+        }
+        
+      brain.ENTER_ALUFN:  // setting input ALUFN
+        state = b11;
+        if (btn_input) {
+          stored_alufn.d = dip_input[5:0];    // alufn only uses first 6 dip switch input
+          brain.d = brain.ENTER_A;
+        } else {
+          brain.d = brain.ENTER_ALUFN;
+        }
+          
+    }
+      
+    // passing dff output to input_module output for A, B and ALUFN
+    a = stored_a.q;
+    b = stored_b.q;
+    alufn = stored_alufn.q;
+    
+  }
+}

@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="alu_checkoff" board="Alchitry Au" language="Lucid" version="3">
   <files>
-    <src>regfile.luc</src>
+    <src>shifter.luc</src>
     <component>simple_dual_ram.v</component>
-    <src>sixteen_bit_adder.luc</src>
+    <src>manual_tester.luc</src>
+    <src>adder.luc</src>
+    <src>sixteen_bit_boolean.luc</src>
+    <src>auto_tester.luc</src>
+    <src>error_checker.luc</src>
     <component>pipeline.luc</component>
-    <src>comparator.luc</src>
-    <src top="true">au_top.luc</src>
-    <src>multiplier.luc</src>
     <component>counter.luc</component>
     <src>boolean.luc</src>
-    <src>adder.luc</src>
     <component>decoder.luc</component>
-    <src>memoryunit.luc</src>
     <src>seven_seg.luc</src>
-    <src>shifter.luc</src>
+    <src>sixteen_bit_adder.luc</src>
     <src>multi_seven_seg.luc</src>
+    <src>comparator.luc</src>
     <component>simple_ram.v</component>
-    <src>input_module.luc</src>
+    <src>control_unit.luc</src>
+    <src>regfile.luc</src>
+    <src>multiplier.luc</src>
+    <src top="true">au_top.luc</src>
     <component>reset_conditioner.luc</component>
     <component>edge_detector.luc</component>
-    <src>sixteen_bit_boolean.luc</src>
-    <src>control_unit.luc</src>
+    <src>memoryunit.luc</src>
     <component>button_conditioner.luc</component>
     <constraint>custom.acf</constraint>
     <constraint lib="true">au.xdc</constraint>
