@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Nov  6 01:20:23 2020
-# Process ID: 1196
+# Start of session at: Fri Nov  6 16:20:50 2020
+# Process ID: 18836
 # Current directory: C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.runs/synth_1
 # Command line: vivado.exe -log au_top_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source au_top_0.tcl
 # Log file: C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.runs/synth_1/au_top_0.vds
@@ -17,76 +17,77 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tftg256-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 24072
+INFO: [Synth 8-7075] Helper process launched with PID 32484
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'au_top_0' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/au_top_0.v:7]
+INFO: [Synth 8-6157] synthesizing module 'button_conditioner_2' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/button_conditioner_2.v:13]
+	Parameter CLK_FREQ bound to: 26'b10111110101111000010000000 
+	Parameter MIN_DELAY bound to: 5'b10100 
+	Parameter NUM_SYNC bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'pipeline_5' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/pipeline_5.v:11]
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_5' (1#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/pipeline_5.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'button_conditioner_2' (2#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/button_conditioner_2.v:13]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector_3' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_3.v:12]
+	Parameter RISE bound to: 1'b1 
+	Parameter FALL bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector_3' (3#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_3.v:12]
+INFO: [Synth 8-6157] synthesizing module 'reset_conditioner_1' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/reset_conditioner_1.v:11]
+	Parameter STAGES bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'reset_conditioner_1' (4#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/reset_conditioner_1.v:11]
+INFO: [Synth 8-6157] synthesizing module 'alu_4' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/alu_4.v:7]
 	Parameter NUMBER_TO_7SEG bound to: 48'b000001100000010100000100000000110000001000000001 
 	Parameter MANUAL_switch_tester bound to: 2'b00 
 	Parameter AUTO_switch_tester bound to: 2'b01 
 	Parameter ERROR_switch_tester bound to: 2'b10 
-INFO: [Synth 8-6157] synthesizing module 'button_conditioner_7' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/button_conditioner_7.v:13]
-	Parameter CLK_FREQ bound to: 26'b10111110101111000010000000 
-	Parameter MIN_DELAY bound to: 5'b10100 
-	Parameter NUM_SYNC bound to: 2'b10 
-INFO: [Synth 8-6157] synthesizing module 'pipeline_15' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/pipeline_15.v:11]
-	Parameter DEPTH bound to: 2'b10 
-INFO: [Synth 8-6155] done synthesizing module 'pipeline_15' (1#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/pipeline_15.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'button_conditioner_7' (2#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/button_conditioner_7.v:13]
-INFO: [Synth 8-6157] synthesizing module 'edge_detector_8' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_8.v:12]
-	Parameter RISE bound to: 1'b1 
-	Parameter FALL bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'edge_detector_8' (3#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_8.v:12]
-INFO: [Synth 8-6157] synthesizing module 'sixteen_bit_adder_1' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_adder_1.v:7]
-INFO: [Synth 8-6157] synthesizing module 'adder_13' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/adder_13.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'adder_13' (4#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/adder_13.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'sixteen_bit_adder_1' (5#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_adder_1.v:7]
-INFO: [Synth 8-6157] synthesizing module 'sixteen_bit_boolean_2' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_boolean_2.v:7]
-INFO: [Synth 8-6157] synthesizing module 'boolean_14' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/boolean_14.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'boolean_14' (6#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/boolean_14.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'sixteen_bit_boolean_2' (7#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_boolean_2.v:7]
-INFO: [Synth 8-6157] synthesizing module 'comparator_3' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_3.v:7]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_3.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'comparator_3' (8#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_3.v:7]
-INFO: [Synth 8-6157] synthesizing module 'shifter_4' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:7]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:32]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:46]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:58]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:71]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:84]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:97]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:110]
-INFO: [Synth 8-6155] done synthesizing module 'shifter_4' (9#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:7]
-INFO: [Synth 8-6157] synthesizing module 'multiplier_5' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multiplier_5.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'multiplier_5' (10#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multiplier_5.v:7]
-INFO: [Synth 8-6157] synthesizing module 'reset_conditioner_6' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/reset_conditioner_6.v:11]
-	Parameter STAGES bound to: 3'b100 
-INFO: [Synth 8-6155] done synthesizing module 'reset_conditioner_6' (11#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/reset_conditioner_6.v:11]
-INFO: [Synth 8-6157] synthesizing module 'multi_seven_seg_9' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multi_seven_seg_9.v:12]
+INFO: [Synth 8-6157] synthesizing module 'sixteen_bit_adder_6' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_adder_6.v:7]
+INFO: [Synth 8-6157] synthesizing module 'adder_15' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/adder_15.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'adder_15' (5#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/adder_15.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'sixteen_bit_adder_6' (6#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_adder_6.v:7]
+INFO: [Synth 8-6157] synthesizing module 'sixteen_bit_boolean_7' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_boolean_7.v:7]
+INFO: [Synth 8-6157] synthesizing module 'boolean_16' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/boolean_16.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'boolean_16' (7#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/boolean_16.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'sixteen_bit_boolean_7' (8#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_boolean_7.v:7]
+INFO: [Synth 8-6157] synthesizing module 'comparator_8' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_8.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_8.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'comparator_8' (9#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_8.v:7]
+INFO: [Synth 8-6157] synthesizing module 'shifter_9' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:7]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:32]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:46]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:58]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:71]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:84]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:97]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:110]
+INFO: [Synth 8-6155] done synthesizing module 'shifter_9' (10#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:7]
+INFO: [Synth 8-6157] synthesizing module 'multiplier_10' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multiplier_10.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier_10' (11#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multiplier_10.v:7]
+INFO: [Synth 8-6157] synthesizing module 'multi_seven_seg_11' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multi_seven_seg_11.v:12]
 	Parameter DIGITS bound to: 3'b100 
 	Parameter DIV bound to: 5'b10000 
 	Parameter DIGIT_BITS bound to: 2'b10 
-INFO: [Synth 8-6157] synthesizing module 'counter_16' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_16.v:14]
+INFO: [Synth 8-6157] synthesizing module 'counter_17' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_17.v:14]
 	Parameter SIZE bound to: 2'b10 
 	Parameter DIV bound to: 5'b10000 
 	Parameter TOP bound to: 4'b0011 
 	Parameter UP bound to: 1'b1 
 	Parameter MAX_VALUE bound to: 20'b00111111111111111111 
-INFO: [Synth 8-6155] done synthesizing module 'counter_16' (12#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_16.v:14]
-INFO: [Synth 8-6157] synthesizing module 'seven_seg_17' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/seven_seg_17.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'seven_seg_17' (13#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/seven_seg_17.v:7]
-INFO: [Synth 8-6157] synthesizing module 'decoder_18' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/decoder_18.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'counter_17' (12#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_17.v:14]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_18' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/seven_seg_18.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_18' (13#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/seven_seg_18.v:7]
+INFO: [Synth 8-6157] synthesizing module 'decoder_19' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/decoder_19.v:11]
 	Parameter WIDTH bound to: 2'b10 
-INFO: [Synth 8-6155] done synthesizing module 'decoder_18' (14#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/decoder_18.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'multi_seven_seg_9' (15#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multi_seven_seg_9.v:12]
-INFO: [Synth 8-6157] synthesizing module 'manual_tester_10' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_10.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_19' (14#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/decoder_19.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'multi_seven_seg_11' (15#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multi_seven_seg_11.v:12]
+INFO: [Synth 8-6157] synthesizing module 'manual_tester_12' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_12.v:7]
 	Parameter ENTER_A_brain bound to: 2'b00 
 	Parameter ENTER_B_brain bound to: 2'b01 
 	Parameter ENTER_ALUFN_brain bound to: 2'b10 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_10.v:37]
-INFO: [Synth 8-6155] done synthesizing module 'manual_tester_10' (16#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_10.v:7]
-INFO: [Synth 8-6157] synthesizing module 'auto_tester_11' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_11.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_12.v:37]
+INFO: [Synth 8-6155] done synthesizing module 'manual_tester_12' (16#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_12.v:7]
+INFO: [Synth 8-6157] synthesizing module 'auto_tester_13' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_13.v:7]
 	Parameter AUTO_A bound to: 96'b000000000000000011111111111111111010010111000011000000000001100111111111111111111000000000000000 
 	Parameter AUTO_B bound to: 96'b000000000000000000000000000000011111000010100101000000000001011111111111111111110111111111111111 
 	Parameter EXPECTED_OUT bound to: 1824'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111110000000000000000111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000000000000001111111111111110111111111111111111111111111111111111111111111110111111111111111100000000000000010000000000000000000000000000000111111111111111101111111111111110000000000000000000000000000000011111111111111110011111111111111111111111111111110000000000000000000000000000000100000000000000011001011001101000101101010001111010100110101011111010010111000011010101010110011011110101111001111010000010000001010110100011110011110000101001010000111101011010010111110111111000001010000110001010101010011001101110000110000000000101001011101111110100101110000000000000000000000000000000010000000000000001000000000011000000000000000000100000001000111111000000000001100100000000000011100000000000011111000000000001000111111111111001100000000000010111111111111110100011111111111011101111111111100000111111111111000100001100100000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111100000000000000000000000000000000111111111111111110000000000000000111111111111111111111111111111110000000000000000111111111111111100000000000000000000000000000000000000000000000011111111111111111000000000000000000000000000000111111111111111110000000000000001000000000000000000000000000000011111111111111111000000000000000110000000000000001000000000000000111111111111111111111111111111110000000000000000011111111111111101111111111111111000000000000000111111111111111100000000000000000000000000000000000000000000000000000000000000011111111111111111000000000000000000000000000000010000000000000001 
@@ -116,38 +117,39 @@ INFO: [Synth 8-6157] synthesizing module 'auto_tester_11' [C:/Users/hazel/Deskto
 	Parameter C_CMPLT_alufn_op bound to: 5'b10001 
 	Parameter C_CMPLE_alufn_op bound to: 5'b10010 
 	Parameter E_ERROR_alufn_op bound to: 5'b10011 
-INFO: [Synth 8-6157] synthesizing module 'counter_19' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_19.v:14]
+INFO: [Synth 8-6157] synthesizing module 'counter_20' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_20.v:14]
 	Parameter SIZE bound to: 1'b1 
 	Parameter DIV bound to: 5'b11011 
 	Parameter TOP bound to: 1'b0 
 	Parameter UP bound to: 1'b1 
 	Parameter MAX_VALUE bound to: 28'b0111111111111111111111111111 
-INFO: [Synth 8-6155] done synthesizing module 'counter_19' (17#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_19.v:14]
-INFO: [Synth 8-6157] synthesizing module 'edge_detector_20' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_20.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'counter_20' (17#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_20.v:14]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector_21' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_21.v:12]
 	Parameter RISE bound to: 1'b1 
 	Parameter FALL bound to: 1'b1 
-INFO: [Synth 8-6155] done synthesizing module 'edge_detector_20' (18#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_20.v:12]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_11.v:103]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_11.v:231]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_11.v:97]
-INFO: [Synth 8-6155] done synthesizing module 'auto_tester_11' (19#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_11.v:7]
-INFO: [Synth 8-6157] synthesizing module 'error_checker_12' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/error_checker_12.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'error_checker_12' (20#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/error_checker_12.v:7]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/au_top_0.v:240]
-INFO: [Synth 8-6155] done synthesizing module 'au_top_0' (21#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/au_top_0.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector_21' (18#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_21.v:12]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_13.v:103]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_13.v:231]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_13.v:97]
+INFO: [Synth 8-6155] done synthesizing module 'auto_tester_13' (19#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_13.v:7]
+INFO: [Synth 8-6157] synthesizing module 'error_checker_14' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/error_checker_14.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'error_checker_14' (20#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/error_checker_14.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/alu_4.v:186]
+INFO: [Synth 8-6155] done synthesizing module 'alu_4' (21#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/alu_4.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'au_top_0' (22#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/au_top_0.v:7]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.124 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1015.211 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -160,29 +162,29 @@ Parsing XDC File [C:/Program Files/Alchitry/Alchitry Labs/library/components/au.
 Finished Parsing XDC File [C:/Program Files/Alchitry/Alchitry Labs/library/components/au.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1015.211 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tftg256-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'M_brain_q_reg' in module 'manual_tester_10'
-INFO: [Synth 8-802] inferred FSM for state register 'M_current_ab_q_reg' in module 'auto_tester_11'
+INFO: [Synth 8-802] inferred FSM for state register 'M_brain_q_reg' in module 'manual_tester_12'
+INFO: [Synth 8-802] inferred FSM for state register 'M_current_ab_q_reg' in module 'auto_tester_13'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -190,7 +192,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'M_current_ab_q_reg' in modu
            ENTER_B_brain |                               01 |                               01
        ENTER_ALUFN_brain |                               10 |                               10
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'M_brain_q_reg' using encoding 'sequential' in module 'manual_tester_10'
+INFO: [Synth 8-3354] encoded FSM with state register 'M_brain_q_reg' using encoding 'sequential' in module 'manual_tester_12'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -201,110 +203,111 @@ INFO: [Synth 8-3354] encoded FSM with state register 'M_brain_q_reg' using encod
        CASE_5_current_ab |                           010000 |                              100
        CASE_6_current_ab |                           100000 |                              101
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'M_current_ab_q_reg' using encoding 'one-hot' in module 'auto_tester_11'
+INFO: [Synth 8-3354] encoded FSM with state register 'M_current_ab_q_reg' using encoding 'one-hot' in module 'auto_tester_13'
+WARNING: [Synth 8-327] inferring latch for variable 'led_reg' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/alu_4.v:193]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[8].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[9].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[10].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[11].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[12].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[13].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[14].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[15].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[2].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[2].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[3].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[3].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[3].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[4].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[4].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[4].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[4].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[5].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[5].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[5].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[5].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[5].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[8].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[8].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[9].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[8].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[9].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[10].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[8].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[9].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[10].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[11].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[10].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[11].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[12].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[13].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[14].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[15].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[2].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[2].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[3].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[3].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[3].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[4].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[4].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[4].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[4].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[5].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[5].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[5].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[5].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[5].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[10].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[10].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[11].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[7].fa'
 INFO: [Common 17-14] Message 'Synth 8-223' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -330,10 +333,10 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 7     
 	   4 Input   32 Bit        Muxes := 1     
-	   2 Input   24 Bit        Muxes := 2     
-	   4 Input   24 Bit        Muxes := 2     
+	   2 Input   24 Bit        Muxes := 4     
+	   4 Input   24 Bit        Muxes := 4     
 	   2 Input   18 Bit        Muxes := 1     
-	   2 Input   16 Bit        Muxes := 39    
+	   2 Input   16 Bit        Muxes := 40    
 	   6 Input   16 Bit        Muxes := 2     
 	   4 Input   16 Bit        Muxes := 13    
 	   4 Input    8 Bit        Muxes := 2     
@@ -369,24 +372,24 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:09 . Memory (MB): peak = 1046.668 ; gain = 33.242
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:25 . Memory (MB): peak = 1041.344 ; gain = 26.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 ROM: Preliminary Mapping	Report
-+------------------+-----------------------+---------------+----------------+
-|Module Name       | RTL Object            | Depth x Width | Implemented As | 
-+------------------+-----------------------+---------------+----------------+
-|auto_tester_11    | M_alufn_op_d          | 32x5          | LUT            | 
-|auto_tester_11    | M_stored_alufn_auto_d | 32x6          | LUT            | 
-|auto_tester_11    | M_stored_j_d          | 32x5          | LUT            | 
-|multi_seven_seg_9 | seg_dec/segs          | 32x7          | LUT            | 
-|auto_tester_11    | M_alufn_op_d          | 32x5          | LUT            | 
-|auto_tester_11    | M_stored_alufn_auto_d | 32x6          | LUT            | 
-|auto_tester_11    | M_stored_j_d          | 32x5          | LUT            | 
-+------------------+-----------------------+---------------+----------------+
++-------------------+-----------------------+---------------+----------------+
+|Module Name        | RTL Object            | Depth x Width | Implemented As | 
++-------------------+-----------------------+---------------+----------------+
+|auto_tester_13     | M_alufn_op_d          | 32x5          | LUT            | 
+|auto_tester_13     | M_stored_alufn_auto_d | 32x6          | LUT            | 
+|auto_tester_13     | M_stored_j_d          | 32x5          | LUT            | 
+|multi_seven_seg_11 | seg_dec/segs          | 32x7          | LUT            | 
+|auto_tester_13     | M_alufn_op_d          | 32x5          | LUT            | 
+|auto_tester_13     | M_stored_alufn_auto_d | 32x6          | LUT            | 
+|auto_tester_13     | M_stored_j_d          | 32x5          | LUT            | 
++-------------------+-----------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -395,19 +398,19 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:19 . Memory (MB): peak = 1046.668 ; gain = 33.242
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:30 ; elapsed = 00:01:38 . Memory (MB): peak = 1041.344 ; gain = 26.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:43 ; elapsed = 00:01:51 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Timing Optimization : Time (s): cpu = 00:02:35 ; elapsed = 00:02:44 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:44 ; elapsed = 00:01:52 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Technology Mapping : Time (s): cpu = 00:02:36 ; elapsed = 00:02:45 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -425,37 +428,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished IO Insertion : Time (s): cpu = 00:02:42 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:42 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -473,38 +476,40 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    36|
-|3     |LUT1   |    23|
-|4     |LUT2   |    56|
-|5     |LUT3   |   129|
-|6     |LUT4   |    51|
-|7     |LUT5   |   162|
-|8     |LUT6   |   503|
-|9     |MUXF7  |    10|
-|10    |FDRE   |   252|
+|3     |LUT1   |    16|
+|4     |LUT2   |    53|
+|5     |LUT3   |   127|
+|6     |LUT4   |    96|
+|7     |LUT5   |   179|
+|8     |LUT6   |   456|
+|9     |MUXF7  |     4|
+|10    |FDRE   |   250|
 |11    |FDSE   |     9|
-|12    |IBUF   |    31|
-|13    |OBUF   |    48|
+|12    |LD     |    24|
+|13    |IBUF   |    31|
+|14    |OBUF   |    48|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:38 ; elapsed = 00:01:54 . Memory (MB): peak = 1233.777 ; gain = 220.352
-Synthesis Optimization Complete : Time (s): cpu = 00:01:51 ; elapsed = 00:01:59 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:26 ; elapsed = 00:02:46 . Memory (MB): peak = 1222.348 ; gain = 207.137
+Synthesis Optimization Complete : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1233.777 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1222.348 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1233.777 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1222.348 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 24 instances were transformed.
+  LD => LDCE: 24 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-175 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+177 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:59 ; elapsed = 00:02:09 . Memory (MB): peak = 1233.777 ; gain = 220.352
+synth_design: Time (s): cpu = 00:02:52 ; elapsed = 00:03:05 . Memory (MB): peak = 1222.348 ; gain = 207.137
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.runs/synth_1/au_top_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file au_top_0_utilization_synth.rpt -pb au_top_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 01:22:37 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 16:24:01 2020...

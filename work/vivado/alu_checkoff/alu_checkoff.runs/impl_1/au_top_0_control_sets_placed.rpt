@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Nov  6 01:23:38 2020
+| Date         : Fri Nov  6 16:25:17 2020
 | Host         : DESKTOP-BIG8F3A running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file au_top_0_control_sets_placed.rpt
 | Design       : au_top_0
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    15 |
-|    Minimum number of control sets                        |    15 |
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    43 |
+| Unused register locations in slices containing registers |    61 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,14 +39,14 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    15 |
-| >= 0 to < 4        |     0 |
+| Total control sets |    20 |
+| >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     3 |
-| >= 6 to < 8        |     3 |
+| >= 6 to < 8        |     4 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     1 |
-| >= 14 to < 16      |     1 |
+| >= 14 to < 16      |     2 |
 | >= 16              |     7 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
@@ -58,36 +58,41 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              13 |            7 |
+| No           | No                    | No                     |              37 |           20 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              94 |           50 |
+| No           | Yes                   | No                     |              92 |           47 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             154 |           49 |
+| Yes          | Yes                   | No                     |             154 |           50 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
-|  Clock Signal  |                     Enable Signal                    |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG |                                                      | reset_cond/M_reset_cond_in                            |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG | auto/slowClockEdge/M_last_q_reg_0[0]                 | buttondetector_gen_0[1].buttondetector/SR[0]          |                2 |              5 |         2.50 |
-|  clk_IBUF_BUFG | auto/slowclock/E[0]                                  | reset_cond/Q[0]                                       |                2 |              5 |         2.50 |
-|  clk_IBUF_BUFG | manual/M_stored_alufn_d                              | reset_cond/Q[0]                                       |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG | auto/slowClockEdge/M_alufn_op_q_reg[0][0]            | buttondetector_gen_0[1].buttondetector/SR[0]          |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG | auto/slowclock/M_alufn_op_q_reg[4][0]                | reset_cond/Q[0]                                       |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG |                                                      |                                                       |                7 |             13 |         1.86 |
-|  clk_IBUF_BUFG | auto/slowClockEdge/E[0]                              | reset_cond/Q[0]                                       |                3 |             14 |         4.67 |
-|  clk_IBUF_BUFG | manual/M_stored_a_d                                  | reset_cond/Q[0]                                       |                8 |             16 |         2.00 |
-|  clk_IBUF_BUFG | manual/M_stored_b_d                                  | reset_cond/Q[0]                                       |                8 |             16 |         2.00 |
-|  clk_IBUF_BUFG | buttoncond_gen_0[0].buttoncond/M_ctr_q[0]_i_2__3_n_0 | buttoncond_gen_0[0].buttoncond/sync/M_pipe_q_reg[1]_0 |                5 |             20 |         4.00 |
-|  clk_IBUF_BUFG | buttoncond_gen_0[1].buttoncond/M_ctr_q[0]_i_2__2_n_0 | buttoncond_gen_0[1].buttoncond/sync/M_pipe_q_reg[1]_0 |                5 |             20 |         4.00 |
-|  clk_IBUF_BUFG | buttoncond_gen_0[2].buttoncond/M_ctr_q[0]_i_2__1_n_0 | buttoncond_gen_0[2].buttoncond/sync/M_pipe_q_reg[1]_0 |                5 |             20 |         4.00 |
-|  clk_IBUF_BUFG | buttoncond_gen_0[3].buttoncond/M_ctr_q[0]_i_2__0_n_0 | buttoncond_gen_0[3].buttoncond/sync/clear             |                5 |             20 |         4.00 |
-|  clk_IBUF_BUFG |                                                      | reset_cond/Q[0]                                       |               48 |             90 |         1.88 |
-+----------------+------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
++----------------------------------+------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
+|           Clock Signal           |                     Enable Signal                    |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------------+------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
+|  alu_obj/auto/slowClockEdge/E[1] |                                                      |                                                       |                1 |              1 |         1.00 |
+|  alu_obj/auto/slowClockEdge/E[0] |                                                      |                                                       |                1 |              1 |         1.00 |
+|  alu_obj/manual/E[0]             |                                                      |                                                       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                   |                                                      | reset_cond/M_reset_cond_in                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                   | alu_obj/auto/slowclock/E[0]                          | reset_cond/Q[0]                                       |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                   | alu_obj/auto/slowClockEdge/M_last_q_reg_0[0]         | alu_obj/auto/M_alufn_op_q                             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                   | alu_obj/manual/M_stored_alufn_d                      | reset_cond/Q[0]                                       |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                   | alu_obj/auto/slowclock/M_alufn_op_q_reg[4][0]        | reset_cond/Q[0]                                       |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                   | alu_obj/auto/slowClockEdge/M_alufn_op_q_reg[0]_1[0]  | alu_obj/auto/M_alufn_op_q                             |                1 |              6 |         6.00 |
+|  alu_obj/led_reg[23]_i_1_n_0     |                                                      |                                                       |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                   |                                                      |                                                       |                7 |             13 |         1.86 |
+|  clk_IBUF_BUFG                   | alu_obj/auto/slowClockEdge/M_alufn_op_q_reg[0]_0[0]  | reset_cond/Q[0]                                       |                2 |             14 |         7.00 |
+|  alu_obj/manual/E[1]             |                                                      |                                                       |                8 |             15 |         1.88 |
+|  clk_IBUF_BUFG                   | alu_obj/manual/M_stored_a_d                          | reset_cond/Q[0]                                       |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                   | alu_obj/manual/M_stored_b_d                          | reset_cond/Q[0]                                       |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                   | buttoncond_gen_0[1].buttoncond/M_ctr_q[0]_i_2__2_n_0 | buttoncond_gen_0[1].buttoncond/sync/M_pipe_q_reg[1]_0 |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG                   | buttoncond_gen_0[2].buttoncond/M_ctr_q[0]_i_2__1_n_0 | buttoncond_gen_0[2].buttoncond/sync/M_pipe_q_reg[1]_0 |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG                   | buttoncond_gen_0[3].buttoncond/sel                   | buttoncond_gen_0[3].buttoncond/sync/clear             |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG                   | buttoncond_gen_0[0].buttoncond/M_ctr_q[0]_i_2__3_n_0 | buttoncond_gen_0[0].buttoncond/sync/M_pipe_q_reg[1]_0 |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG                   |                                                      | reset_cond/Q[0]                                       |               45 |             88 |         1.96 |
++----------------------------------+------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
 
 

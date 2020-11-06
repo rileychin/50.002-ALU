@@ -15,7 +15,7 @@ source {C:\Users\hazel\Desktop\__sutd_term4\50.002 Comp Struct\50.002-ALU\work\p
 INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
 Current project path is 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff'
 # set_property design_mode RTL [get_filesets sources_1]
-# set verilogSources [list "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/au_top_0.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/sixteen_bit_adder_1.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/sixteen_bit_boolean_2.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/comparator_3.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/shifter_4.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/multiplier_5.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/reset_conditioner_6.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/button_conditioner_7.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/edge_detector_8.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/multi_seven_seg_9.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/manual_tester_10.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/auto_tester_11.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/error_checker_12.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/adder_13.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/boolean_14.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/pipeline_15.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/counter_16.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/seven_seg_17.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/decoder_18.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/counter_19.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/edge_detector_20.v" ]
+# set verilogSources [list "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/au_top_0.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/reset_conditioner_1.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/button_conditioner_2.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/edge_detector_3.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/alu_4.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/pipeline_5.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/sixteen_bit_adder_6.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/sixteen_bit_boolean_7.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/comparator_8.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/shifter_9.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/multiplier_10.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/multi_seven_seg_11.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/manual_tester_12.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/auto_tester_13.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/error_checker_14.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/adder_15.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/boolean_16.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/counter_17.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/seven_seg_18.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/decoder_19.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/counter_20.v" "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/verilog/edge_detector_21.v" ]
 # import_files -fileset [get_filesets sources_1] -force -norecurse $verilogSources
 # set xdcSources [list "C:/Users/hazel/Desktop/__sutd_term4/50.002\ Comp\ Struct/50.002-ALU/work/constraint/custom.xdc" "C:/Program\ Files/Alchitry/Alchitry\ Labs/library/components/au.xdc" ]
 # read_xdc $xdcSources
@@ -23,10 +23,10 @@ Current project path is 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/
 # update_compile_order -fileset sources_1
 # launch_runs -runs synth_1 -jobs 8
 
-[Fri Nov  6 01:20:19 2020] Launched synth_1...
+[Fri Nov  6 16:20:45 2020] Launched synth_1...
 Run output will be captured here: C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.runs/synth_1/runme.log
 # wait_on_run synth_1
-[Fri Nov  6 01:20:19 2020] Waiting for synth_1 to finish...
+[Fri Nov  6 16:20:45 2020] Waiting for synth_1 to finish...
 
 *** Running vivado
     with args -log au_top_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source au_top_0.tcl
@@ -46,76 +46,77 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tftg256-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 24072
+INFO: [Synth 8-7075] Helper process launched with PID 32484
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'au_top_0' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/au_top_0.v:7]
+INFO: [Synth 8-6157] synthesizing module 'button_conditioner_2' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/button_conditioner_2.v:13]
+	Parameter CLK_FREQ bound to: 26'b10111110101111000010000000 
+	Parameter MIN_DELAY bound to: 5'b10100 
+	Parameter NUM_SYNC bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'pipeline_5' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/pipeline_5.v:11]
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_5' (1#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/pipeline_5.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'button_conditioner_2' (2#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/button_conditioner_2.v:13]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector_3' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_3.v:12]
+	Parameter RISE bound to: 1'b1 
+	Parameter FALL bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector_3' (3#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_3.v:12]
+INFO: [Synth 8-6157] synthesizing module 'reset_conditioner_1' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/reset_conditioner_1.v:11]
+	Parameter STAGES bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'reset_conditioner_1' (4#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/reset_conditioner_1.v:11]
+INFO: [Synth 8-6157] synthesizing module 'alu_4' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/alu_4.v:7]
 	Parameter NUMBER_TO_7SEG bound to: 48'b000001100000010100000100000000110000001000000001 
 	Parameter MANUAL_switch_tester bound to: 2'b00 
 	Parameter AUTO_switch_tester bound to: 2'b01 
 	Parameter ERROR_switch_tester bound to: 2'b10 
-INFO: [Synth 8-6157] synthesizing module 'button_conditioner_7' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/button_conditioner_7.v:13]
-	Parameter CLK_FREQ bound to: 26'b10111110101111000010000000 
-	Parameter MIN_DELAY bound to: 5'b10100 
-	Parameter NUM_SYNC bound to: 2'b10 
-INFO: [Synth 8-6157] synthesizing module 'pipeline_15' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/pipeline_15.v:11]
-	Parameter DEPTH bound to: 2'b10 
-INFO: [Synth 8-6155] done synthesizing module 'pipeline_15' (1#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/pipeline_15.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'button_conditioner_7' (2#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/button_conditioner_7.v:13]
-INFO: [Synth 8-6157] synthesizing module 'edge_detector_8' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_8.v:12]
-	Parameter RISE bound to: 1'b1 
-	Parameter FALL bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'edge_detector_8' (3#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_8.v:12]
-INFO: [Synth 8-6157] synthesizing module 'sixteen_bit_adder_1' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_adder_1.v:7]
-INFO: [Synth 8-6157] synthesizing module 'adder_13' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/adder_13.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'adder_13' (4#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/adder_13.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'sixteen_bit_adder_1' (5#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_adder_1.v:7]
-INFO: [Synth 8-6157] synthesizing module 'sixteen_bit_boolean_2' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_boolean_2.v:7]
-INFO: [Synth 8-6157] synthesizing module 'boolean_14' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/boolean_14.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'boolean_14' (6#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/boolean_14.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'sixteen_bit_boolean_2' (7#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_boolean_2.v:7]
-INFO: [Synth 8-6157] synthesizing module 'comparator_3' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_3.v:7]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_3.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'comparator_3' (8#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_3.v:7]
-INFO: [Synth 8-6157] synthesizing module 'shifter_4' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:7]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:32]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:46]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:58]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:71]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:84]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:97]
-INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:110]
-INFO: [Synth 8-6155] done synthesizing module 'shifter_4' (9#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_4.v:7]
-INFO: [Synth 8-6157] synthesizing module 'multiplier_5' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multiplier_5.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'multiplier_5' (10#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multiplier_5.v:7]
-INFO: [Synth 8-6157] synthesizing module 'reset_conditioner_6' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/reset_conditioner_6.v:11]
-	Parameter STAGES bound to: 3'b100 
-INFO: [Synth 8-6155] done synthesizing module 'reset_conditioner_6' (11#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/reset_conditioner_6.v:11]
-INFO: [Synth 8-6157] synthesizing module 'multi_seven_seg_9' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multi_seven_seg_9.v:12]
+INFO: [Synth 8-6157] synthesizing module 'sixteen_bit_adder_6' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_adder_6.v:7]
+INFO: [Synth 8-6157] synthesizing module 'adder_15' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/adder_15.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'adder_15' (5#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/adder_15.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'sixteen_bit_adder_6' (6#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_adder_6.v:7]
+INFO: [Synth 8-6157] synthesizing module 'sixteen_bit_boolean_7' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_boolean_7.v:7]
+INFO: [Synth 8-6157] synthesizing module 'boolean_16' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/boolean_16.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'boolean_16' (7#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/boolean_16.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'sixteen_bit_boolean_7' (8#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/sixteen_bit_boolean_7.v:7]
+INFO: [Synth 8-6157] synthesizing module 'comparator_8' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_8.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_8.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'comparator_8' (9#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/comparator_8.v:7]
+INFO: [Synth 8-6157] synthesizing module 'shifter_9' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:7]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:32]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:46]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:58]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:71]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:84]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:97]
+INFO: [Synth 8-226] default block is never used [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:110]
+INFO: [Synth 8-6155] done synthesizing module 'shifter_9' (10#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/shifter_9.v:7]
+INFO: [Synth 8-6157] synthesizing module 'multiplier_10' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multiplier_10.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier_10' (11#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multiplier_10.v:7]
+INFO: [Synth 8-6157] synthesizing module 'multi_seven_seg_11' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multi_seven_seg_11.v:12]
 	Parameter DIGITS bound to: 3'b100 
 	Parameter DIV bound to: 5'b10000 
 	Parameter DIGIT_BITS bound to: 2'b10 
-INFO: [Synth 8-6157] synthesizing module 'counter_16' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_16.v:14]
+INFO: [Synth 8-6157] synthesizing module 'counter_17' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_17.v:14]
 	Parameter SIZE bound to: 2'b10 
 	Parameter DIV bound to: 5'b10000 
 	Parameter TOP bound to: 4'b0011 
 	Parameter UP bound to: 1'b1 
 	Parameter MAX_VALUE bound to: 20'b00111111111111111111 
-INFO: [Synth 8-6155] done synthesizing module 'counter_16' (12#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_16.v:14]
-INFO: [Synth 8-6157] synthesizing module 'seven_seg_17' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/seven_seg_17.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'seven_seg_17' (13#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/seven_seg_17.v:7]
-INFO: [Synth 8-6157] synthesizing module 'decoder_18' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/decoder_18.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'counter_17' (12#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_17.v:14]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_18' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/seven_seg_18.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_18' (13#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/seven_seg_18.v:7]
+INFO: [Synth 8-6157] synthesizing module 'decoder_19' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/decoder_19.v:11]
 	Parameter WIDTH bound to: 2'b10 
-INFO: [Synth 8-6155] done synthesizing module 'decoder_18' (14#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/decoder_18.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'multi_seven_seg_9' (15#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multi_seven_seg_9.v:12]
-INFO: [Synth 8-6157] synthesizing module 'manual_tester_10' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_10.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_19' (14#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/decoder_19.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'multi_seven_seg_11' (15#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/multi_seven_seg_11.v:12]
+INFO: [Synth 8-6157] synthesizing module 'manual_tester_12' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_12.v:7]
 	Parameter ENTER_A_brain bound to: 2'b00 
 	Parameter ENTER_B_brain bound to: 2'b01 
 	Parameter ENTER_ALUFN_brain bound to: 2'b10 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_10.v:37]
-INFO: [Synth 8-6155] done synthesizing module 'manual_tester_10' (16#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_10.v:7]
-INFO: [Synth 8-6157] synthesizing module 'auto_tester_11' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_11.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_12.v:37]
+INFO: [Synth 8-6155] done synthesizing module 'manual_tester_12' (16#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/manual_tester_12.v:7]
+INFO: [Synth 8-6157] synthesizing module 'auto_tester_13' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_13.v:7]
 	Parameter AUTO_A bound to: 96'b000000000000000011111111111111111010010111000011000000000001100111111111111111111000000000000000 
 	Parameter AUTO_B bound to: 96'b000000000000000000000000000000011111000010100101000000000001011111111111111111110111111111111111 
 	Parameter EXPECTED_OUT bound to: 1824'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111110000000000000000111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000000000000001111111111111110111111111111111111111111111111111111111111111110111111111111111100000000000000010000000000000000000000000000000111111111111111101111111111111110000000000000000000000000000000011111111111111110011111111111111111111111111111110000000000000000000000000000000100000000000000011001011001101000101101010001111010100110101011111010010111000011010101010110011011110101111001111010000010000001010110100011110011110000101001010000111101011010010111110111111000001010000110001010101010011001101110000110000000000101001011101111110100101110000000000000000000000000000000010000000000000001000000000011000000000000000000100000001000111111000000000001100100000000000011100000000000011111000000000001000111111111111001100000000000010111111111111110100011111111111011101111111111100000111111111111000100001100100000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111100000000000000000000000000000000111111111111111110000000000000000111111111111111111111111111111110000000000000000111111111111111100000000000000000000000000000000000000000000000011111111111111111000000000000000000000000000000111111111111111110000000000000001000000000000000000000000000000011111111111111111000000000000000110000000000000001000000000000000111111111111111111111111111111110000000000000000011111111111111101111111111111111000000000000000111111111111111100000000000000000000000000000000000000000000000000000000000000011111111111111111000000000000000000000000000000010000000000000001 
@@ -145,38 +146,39 @@ INFO: [Synth 8-6157] synthesizing module 'auto_tester_11' [C:/Users/hazel/Deskto
 	Parameter C_CMPLT_alufn_op bound to: 5'b10001 
 	Parameter C_CMPLE_alufn_op bound to: 5'b10010 
 	Parameter E_ERROR_alufn_op bound to: 5'b10011 
-INFO: [Synth 8-6157] synthesizing module 'counter_19' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_19.v:14]
+INFO: [Synth 8-6157] synthesizing module 'counter_20' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_20.v:14]
 	Parameter SIZE bound to: 1'b1 
 	Parameter DIV bound to: 5'b11011 
 	Parameter TOP bound to: 1'b0 
 	Parameter UP bound to: 1'b1 
 	Parameter MAX_VALUE bound to: 28'b0111111111111111111111111111 
-INFO: [Synth 8-6155] done synthesizing module 'counter_19' (17#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_19.v:14]
-INFO: [Synth 8-6157] synthesizing module 'edge_detector_20' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_20.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'counter_20' (17#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/counter_20.v:14]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector_21' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_21.v:12]
 	Parameter RISE bound to: 1'b1 
 	Parameter FALL bound to: 1'b1 
-INFO: [Synth 8-6155] done synthesizing module 'edge_detector_20' (18#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_20.v:12]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_11.v:103]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_11.v:231]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_11.v:97]
-INFO: [Synth 8-6155] done synthesizing module 'auto_tester_11' (19#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_11.v:7]
-INFO: [Synth 8-6157] synthesizing module 'error_checker_12' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/error_checker_12.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'error_checker_12' (20#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/error_checker_12.v:7]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/au_top_0.v:240]
-INFO: [Synth 8-6155] done synthesizing module 'au_top_0' (21#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/au_top_0.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector_21' (18#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/edge_detector_21.v:12]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_13.v:103]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_13.v:231]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_13.v:97]
+INFO: [Synth 8-6155] done synthesizing module 'auto_tester_13' (19#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/auto_tester_13.v:7]
+INFO: [Synth 8-6157] synthesizing module 'error_checker_14' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/error_checker_14.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'error_checker_14' (20#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/error_checker_14.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/alu_4.v:186]
+INFO: [Synth 8-6155] done synthesizing module 'alu_4' (21#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/alu_4.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'au_top_0' (22#1) [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/au_top_0.v:7]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.124 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1015.211 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -189,29 +191,29 @@ Parsing XDC File [C:/Program Files/Alchitry/Alchitry Labs/library/components/au.
 Finished Parsing XDC File [C:/Program Files/Alchitry/Alchitry Labs/library/components/au.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1015.211 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tftg256-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'M_brain_q_reg' in module 'manual_tester_10'
-INFO: [Synth 8-802] inferred FSM for state register 'M_current_ab_q_reg' in module 'auto_tester_11'
+INFO: [Synth 8-802] inferred FSM for state register 'M_brain_q_reg' in module 'manual_tester_12'
+INFO: [Synth 8-802] inferred FSM for state register 'M_current_ab_q_reg' in module 'auto_tester_13'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -219,7 +221,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'M_current_ab_q_reg' in modu
            ENTER_B_brain |                               01 |                               01
        ENTER_ALUFN_brain |                               10 |                               10
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'M_brain_q_reg' using encoding 'sequential' in module 'manual_tester_10'
+INFO: [Synth 8-3354] encoded FSM with state register 'M_brain_q_reg' using encoding 'sequential' in module 'manual_tester_12'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -230,110 +232,111 @@ INFO: [Synth 8-3354] encoded FSM with state register 'M_brain_q_reg' using encod
        CASE_5_current_ab |                           010000 |                              100
        CASE_6_current_ab |                           100000 |                              101
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'M_current_ab_q_reg' using encoding 'one-hot' in module 'auto_tester_11'
+INFO: [Synth 8-3354] encoded FSM with state register 'M_current_ab_q_reg' using encoding 'one-hot' in module 'auto_tester_13'
+WARNING: [Synth 8-327] inferring latch for variable 'led_reg' [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.srcs/sources_1/imports/verilog/alu_4.v:193]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1013.426 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1015.211 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[8].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[9].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[10].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[11].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[12].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[13].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[14].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[0].fa_gen_1[15].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[2].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[2].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[3].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[3].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[3].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[4].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[4].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[4].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[4].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[5].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[5].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[5].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[5].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[5].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[6].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[7].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[8].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[9].fa_gen_1[8].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[8].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[10].fa_gen_1[9].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[8].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[9].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[11].fa_gen_1[10].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[7].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[8].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[9].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[10].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[12].fa_gen_1[11].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[0].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[1].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[2].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[3].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[4].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[5].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[6].fa'
-INFO: [Synth 8-223] decloning instance 'alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_13) to 'alu_mul/fa_gen_0[13].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[10].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[11].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[12].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[13].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[14].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[0].fa_gen_1[15].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[2].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[2].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[3].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[3].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[3].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[4].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[4].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[4].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[4].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[5].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[5].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[5].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[5].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[5].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[6].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[7].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[8].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[9].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[10].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[11].fa_gen_1[10].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[7].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[8].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[9].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[10].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[12].fa_gen_1[11].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[0].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[1].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[2].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[3].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[4].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[5].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[6].fa'
+INFO: [Synth 8-223] decloning instance 'alu_obj/alu_mul/fa_gen_0[1].fa_gen_1[0].fa' (adder_15) to 'alu_obj/alu_mul/fa_gen_0[13].fa_gen_1[7].fa'
 INFO: [Common 17-14] Message 'Synth 8-223' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -359,10 +362,10 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 7     
 	   4 Input   32 Bit        Muxes := 1     
-	   2 Input   24 Bit        Muxes := 2     
-	   4 Input   24 Bit        Muxes := 2     
+	   2 Input   24 Bit        Muxes := 4     
+	   4 Input   24 Bit        Muxes := 4     
 	   2 Input   18 Bit        Muxes := 1     
-	   2 Input   16 Bit        Muxes := 39    
+	   2 Input   16 Bit        Muxes := 40    
 	   6 Input   16 Bit        Muxes := 2     
 	   4 Input   16 Bit        Muxes := 13    
 	   4 Input    8 Bit        Muxes := 2     
@@ -398,24 +401,24 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:09 . Memory (MB): peak = 1046.668 ; gain = 33.242
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:25 . Memory (MB): peak = 1041.344 ; gain = 26.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 ROM: Preliminary Mapping	Report
-+------------------+-----------------------+---------------+----------------+
-|Module Name       | RTL Object            | Depth x Width | Implemented As | 
-+------------------+-----------------------+---------------+----------------+
-|auto_tester_11    | M_alufn_op_d          | 32x5          | LUT            | 
-|auto_tester_11    | M_stored_alufn_auto_d | 32x6          | LUT            | 
-|auto_tester_11    | M_stored_j_d          | 32x5          | LUT            | 
-|multi_seven_seg_9 | seg_dec/segs          | 32x7          | LUT            | 
-|auto_tester_11    | M_alufn_op_d          | 32x5          | LUT            | 
-|auto_tester_11    | M_stored_alufn_auto_d | 32x6          | LUT            | 
-|auto_tester_11    | M_stored_j_d          | 32x5          | LUT            | 
-+------------------+-----------------------+---------------+----------------+
++-------------------+-----------------------+---------------+----------------+
+|Module Name        | RTL Object            | Depth x Width | Implemented As | 
++-------------------+-----------------------+---------------+----------------+
+|auto_tester_13     | M_alufn_op_d          | 32x5          | LUT            | 
+|auto_tester_13     | M_stored_alufn_auto_d | 32x6          | LUT            | 
+|auto_tester_13     | M_stored_j_d          | 32x5          | LUT            | 
+|multi_seven_seg_11 | seg_dec/segs          | 32x7          | LUT            | 
+|auto_tester_13     | M_alufn_op_d          | 32x5          | LUT            | 
+|auto_tester_13     | M_stored_alufn_auto_d | 32x6          | LUT            | 
+|auto_tester_13     | M_stored_j_d          | 32x5          | LUT            | 
++-------------------+-----------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -424,19 +427,19 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:19 . Memory (MB): peak = 1046.668 ; gain = 33.242
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:30 ; elapsed = 00:01:38 . Memory (MB): peak = 1041.344 ; gain = 26.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:43 ; elapsed = 00:01:51 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Timing Optimization : Time (s): cpu = 00:02:35 ; elapsed = 00:02:44 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:44 ; elapsed = 00:01:52 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Technology Mapping : Time (s): cpu = 00:02:36 ; elapsed = 00:02:45 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -454,37 +457,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished IO Insertion : Time (s): cpu = 00:02:42 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:42 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -502,48 +505,50 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    36|
-|3     |LUT1   |    23|
-|4     |LUT2   |    56|
-|5     |LUT3   |   129|
-|6     |LUT4   |    51|
-|7     |LUT5   |   162|
-|8     |LUT6   |   503|
-|9     |MUXF7  |    10|
-|10    |FDRE   |   252|
+|3     |LUT1   |    16|
+|4     |LUT2   |    53|
+|5     |LUT3   |   127|
+|6     |LUT4   |    96|
+|7     |LUT5   |   179|
+|8     |LUT6   |   456|
+|9     |MUXF7  |     4|
+|10    |FDRE   |   250|
 |11    |FDSE   |     9|
-|12    |IBUF   |    31|
-|13    |OBUF   |    48|
+|12    |LD     |    24|
+|13    |IBUF   |    31|
+|14    |OBUF   |    48|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:51 ; elapsed = 00:01:58 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:38 ; elapsed = 00:01:54 . Memory (MB): peak = 1233.777 ; gain = 220.352
-Synthesis Optimization Complete : Time (s): cpu = 00:01:51 ; elapsed = 00:01:59 . Memory (MB): peak = 1233.777 ; gain = 220.352
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:26 ; elapsed = 00:02:46 . Memory (MB): peak = 1222.348 ; gain = 207.137
+Synthesis Optimization Complete : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1222.348 ; gain = 207.137
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1233.777 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1222.348 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1233.777 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1222.348 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 24 instances were transformed.
+  LD => LDCE: 24 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-175 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+177 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:59 ; elapsed = 00:02:09 . Memory (MB): peak = 1233.777 ; gain = 220.352
+synth_design: Time (s): cpu = 00:02:52 ; elapsed = 00:03:05 . Memory (MB): peak = 1222.348 ; gain = 207.137
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.runs/synth_1/au_top_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file au_top_0_utilization_synth.rpt -pb au_top_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 01:22:37 2020...
-[Fri Nov  6 01:22:41 2020] synth_1 finished
-wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:22 . Memory (MB): peak = 1013.250 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 16:24:01 2020...
+[Fri Nov  6 16:24:07 2020] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:03:22 . Memory (MB): peak = 1012.762 ; gain = 0.000
 # launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Fri Nov  6 01:22:41 2020] Launched impl_1...
+[Fri Nov  6 16:24:07 2020] Launched impl_1...
 Run output will be captured here: C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.runs/impl_1/runme.log
 # wait_on_run impl_1
-[Fri Nov  6 01:22:41 2020] Waiting for impl_1 to finish...
+[Fri Nov  6 16:24:07 2020] Waiting for impl_1 to finish...
 
 
 *** Running vivado
@@ -561,8 +566,8 @@ Command: link_design -top au_top_0 -part xc7a35tftg256-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7a35tftg256-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1013.086 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1013.004 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -572,13 +577,13 @@ Finished Parsing XDC File [C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struc
 Parsing XDC File [C:/Program Files/Alchitry/Alchitry Labs/library/components/au.xdc]
 Finished Parsing XDC File [C:/Program Files/Alchitry/Alchitry Labs/library/components/au.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1013.086 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1013.004 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 7 Infos, 0 Warnings, 1 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1013.086 ; gain = 0.000
+link_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1013.004 ; gain = 0.000
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -589,54 +594,54 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1013.086 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1013.004 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 174546db5
+Ending Cache Timing Information Task | Checksum: 12cc7ccc6
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1245.117 ; gain = 232.031
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1245.730 ; gain = 232.727
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 21b442f8b
+Phase 1 Retarget | Checksum: 1dc30a51c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.142 . Memory (MB): peak = 1447.016 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 8 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.238 . Memory (MB): peak = 1449.863 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 14d87b00d
+Phase 2 Constant propagation | Checksum: 1a6348403
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.161 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.277 . Memory (MB): peak = 1449.863 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1b068922b
+Phase 3 Sweep | Checksum: 15bb96758
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.196 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.336 . Memory (MB): peak = 1449.863 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 1b068922b
+Phase 4 BUFG optimization | Checksum: 15bb96758
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.224 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.388 . Memory (MB): peak = 1449.863 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1b068922b
+Phase 5 Shift Register Optimization | Checksum: 15bb96758
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.244 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.431 . Memory (MB): peak = 1449.863 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1b068922b
+Phase 6 Post Processing Netlist | Checksum: 15bb96758
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.254 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.450 . Memory (MB): peak = 1449.863 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -645,7 +650,7 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |               8  |                                              0  |
+|  Retarget                     |               0  |               1  |                                              0  |
 |  Constant propagation         |               0  |               0  |                                              0  |
 |  Sweep                        |               0  |               0  |                                              0  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
@@ -657,37 +662,37 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1447.016 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 189a57fea
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1449.863 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1458d279a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.290 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.522 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 189a57fea
+Ending Power Optimization Task | Checksum: 1458d279a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 189a57fea
+Ending Final Cleanup Task | Checksum: 1458d279a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1447.016 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 189a57fea
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1449.863 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1458d279a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1449.863 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 24 Infos, 0 Warnings, 1 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1447.016 ; gain = 433.930
+opt_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1449.863 ; gain = 436.859
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.141 . Memory (MB): peak = 1449.863 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.runs/impl_1/au_top_0_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file au_top_0_drc_opted.rpt -pb au_top_0_drc_opted.pb -rpx au_top_0_drc_opted.rpx
 Command: report_drc -file au_top_0_drc_opted.rpt -pb au_top_0_drc_opted.pb -rpx au_top_0_drc_opted.rpx
@@ -714,45 +719,45 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1447.016 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: b8c816fa
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1449.863 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: b0da0730
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1447.016 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1449.863 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 WARNING: [Place 30-87] Partially locked IO Bus is found. Following components of the IO Bus io_button are not locked:  'io_button[4]' 
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 182752ed6
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 17fce1b76
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1c5466143
+Phase 1.3 Build Placer Netlist Model | Checksum: 2426c5a53
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1c5466143
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2426c5a53
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1447.016 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 1c5466143
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1449.863 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 2426c5a53
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 20c156cd5
+Phase 2.1 Floorplanning | Checksum: 263c6c41c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 2.2 Global Placement Core
 
 Phase 2.2.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 9 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 4 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-775] End 1 Pass. Optimized 4 nets or cells. Created 0 new cell, deleted 4 existing cells and moved 0 existing cell
+INFO: [Physopt 32-775] End 1 Pass. Optimized 2 nets or cells. Created 0 new cell, deleted 2 existing cells and moved 0 existing cell
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -763,7 +768,7 @@ INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was
 INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -772,7 +777,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |              4  |                     4  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |              2  |                     2  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
@@ -780,59 +785,59 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |              4  |                     4  |           0  |           3  |  00:00:00  |
+|  Total                                            |            0  |              2  |                     2  |           0  |           3  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 249d3ce42
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1aacb541b
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1447.016 ; gain = 0.000
-Phase 2.2 Global Placement Core | Checksum: 1bf963c9f
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1449.863 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: 17e0a8360
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1447.016 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 1bf963c9f
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1449.863 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 17e0a8360
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1a4485d24
+Phase 3.1 Commit Multi Column Macros | Checksum: 172bc762e
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 126e0fc4e
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 16c3f6afb
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 10bc58d65
+Phase 3.3 Area Swap Optimization | Checksum: 21d7b9fb9
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1810fb6ff
+Phase 3.4 Pipeline Register Optimization | Checksum: 17b202787
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 1fdd62b52
+Phase 3.5 Small Shape Detail Placement | Checksum: 1095b5717
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 17508a5c6
+Phase 3.6 Re-assign LUT pins | Checksum: 140da028e
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 18ca30645
+Phase 3.7 Pipeline Register Optimization | Checksum: 1313fedb6
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1447.016 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 18ca30645
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1449.863 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1313fedb6
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1447.016 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1449.863 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -840,7 +845,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 16a8e6e57
+Post Placement Optimization Initialization | Checksum: 1d190b936
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -848,62 +853,62 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=3.273 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: 1c36dbbd6
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=4.352 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 219f6e814
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 1454.645 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1457.195 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 192768be8
+Ending Physical Synthesis Task | Checksum: 1a18b7a41
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 1454.645 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 16a8e6e57
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1457.195 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1d190b936
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1454.645 ; gain = 7.629
-INFO: [Place 30-746] Post Placement Timing Summary WNS=3.273. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: caa76ee7
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1457.195 ; gain = 7.332
+INFO: [Place 30-746] Post Placement Timing Summary WNS=4.352. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 11a0dad60
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1454.645 ; gain = 7.629
-Phase 4.1 Post Commit Optimization | Checksum: caa76ee7
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1457.195 ; gain = 7.332
+Phase 4.1 Post Commit Optimization | Checksum: 11a0dad60
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1454.645 ; gain = 7.629
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1457.195 ; gain = 7.332
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: caa76ee7
+Phase 4.2 Post Placement Cleanup | Checksum: 11a0dad60
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1454.645 ; gain = 7.629
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1457.195 ; gain = 7.332
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: caa76ee7
+Phase 4.3 Placer Reporting | Checksum: 11a0dad60
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1454.645 ; gain = 7.629
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1457.195 ; gain = 7.332
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1454.645 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: 134a0ab85
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1457.195 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 131d2c440
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1454.645 ; gain = 7.629
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 134a0ab85
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1457.195 ; gain = 7.332
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 131d2c440
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1454.645 ; gain = 7.629
-Ending Placer Task | Checksum: 12b925f96
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1457.195 ; gain = 7.332
+Ending Placer Task | Checksum: 1249d70b7
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1454.645 ; gain = 7.629
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1457.195 ; gain = 7.332
 INFO: [Common 17-83] Releasing license: Implementation
 60 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1454.645 ; gain = 7.629
+place_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1457.195 ; gain = 7.332
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.276 . Memory (MB): peak = 1454.645 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.237 . Memory (MB): peak = 1457.203 ; gain = 0.008
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.runs/impl_1/au_top_0_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file au_top_0_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.118 . Memory (MB): peak = 1454.645 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.186 . Memory (MB): peak = 1457.203 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file au_top_0_utilization_placed.rpt -pb au_top_0_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file au_top_0_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1454.645 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1457.203 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -917,7 +922,7 @@ Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.377 . Memory (MB): peak = 1488.273 ; gain = 19.191
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.382 . Memory (MB): peak = 1490.895 ; gain = 19.270
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.runs/impl_1/au_top_0_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
@@ -931,118 +936,120 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 77fe1b71 ConstDB: 0 ShapeSum: b3944425 RouteDB: 0
+Checksum: PlaceDB: 4c4cf18c ConstDB: 0 ShapeSum: d8507f2b RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: c2e43cef
+Phase 1 Build RT Design | Checksum: 2d36b1fe
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1575.438 ; gain = 75.434
-Post Restoration Checksum: NetGraph: 50152129 NumContArr: 72cf1bc6 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 1575.680 ; gain = 73.070
+Post Restoration Checksum: NetGraph: 56a6ea9 NumContArr: 27cc4355 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: c2e43cef
+Phase 2.1 Create Timer | Checksum: 2d36b1fe
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1575.438 ; gain = 75.434
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 1575.688 ; gain = 73.078
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: c2e43cef
+Phase 2.2 Fix Topology Constraints | Checksum: 2d36b1fe
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1581.477 ; gain = 81.473
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 1581.676 ; gain = 79.066
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: c2e43cef
+Phase 2.3 Pre Route Cleanup | Checksum: 2d36b1fe
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1581.477 ; gain = 81.473
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 1581.676 ; gain = 79.066
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 809657e5
+Phase 2.4 Update Timing | Checksum: ef637a7a
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 1586.484 ; gain = 86.480
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.324  | TNS=0.000  | WHS=-0.113 | THS=-2.642 |
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 1589.531 ; gain = 86.922
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.856  | TNS=0.000  | WHS=-0.093 | THS=-2.391 |
 
-Phase 2 Router Initialization | Checksum: 514e900c
+Phase 2 Router Initialization | Checksum: 12214eaca
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1586.484 ; gain = 86.480
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 1589.531 ; gain = 86.922
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0 %
-  Global Horizontal Routing Utilization  = 0 %
+  Global Vertical Routing Utilization    = 0.212629 %
+  Global Horizontal Routing Utilization  = 0.319365 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 1164
+  Number of Failed Nets               = 572
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 1164
-  Number of Partially Routed Nets     = 0
-  Number of Node Overlaps             = 0
+  Number of Unrouted Nets             = 421
+  Number of Partially Routed Nets     = 151
+  Number of Node Overlaps             = 3218
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: e45f4954
+Phase 3 Initial Routing | Checksum: 206e74825
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1587.754 ; gain = 87.750
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 1589.531 ; gain = 86.922
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
  Number of Nodes with overlaps = 195
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.357  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.020  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1a2791d27
+Phase 4.1 Global Iteration 0 | Checksum: f50e3c31
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 1587.754 ; gain = 87.750
-Phase 4 Rip-up And Reroute | Checksum: 1a2791d27
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1589.531 ; gain = 86.922
+Phase 4 Rip-up And Reroute | Checksum: f50e3c31
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 1587.754 ; gain = 87.750
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1589.531 ; gain = 86.922
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 22883f3aa
+Phase 5.1.1 Update Timing | Checksum: 1253e24a9
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 1587.754 ; gain = 87.750
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.437  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1589.531 ; gain = 86.922
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.020  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 22883f3aa
+Phase 5.1 Delay CleanUp | Checksum: 1253e24a9
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 1587.754 ; gain = 87.750
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1589.531 ; gain = 86.922
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 22883f3aa
+Phase 5.2 Clock Skew Optimization | Checksum: 1253e24a9
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 1587.754 ; gain = 87.750
-Phase 5 Delay and Skew Optimization | Checksum: 22883f3aa
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1589.531 ; gain = 86.922
+Phase 5 Delay and Skew Optimization | Checksum: 1253e24a9
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 1587.754 ; gain = 87.750
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1589.531 ; gain = 86.922
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 20c237c0c
+Phase 6.1.1 Update Timing | Checksum: 158215191
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 1587.754 ; gain = 87.750
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.437  | TNS=0.000  | WHS=0.163  | THS=0.000  |
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1589.531 ; gain = 86.922
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.020  | TNS=0.000  | WHS=0.161  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 16a0506ff
+Phase 6.1 Hold Fix Iter | Checksum: fd11f6b5
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 1587.754 ; gain = 87.750
-Phase 6 Post Hold Fix | Checksum: 16a0506ff
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1589.531 ; gain = 86.922
+Phase 6 Post Hold Fix | Checksum: fd11f6b5
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 1587.754 ; gain = 87.750
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1589.531 ; gain = 86.922
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.336044 %
-  Global Horizontal Routing Utilization  = 0.41671 %
+  Global Vertical Routing Utilization    = 0.408834 %
+  Global Horizontal Routing Utilization  = 0.469287 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1052,44 +1059,44 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 166486342
+Phase 7 Route finalize | Checksum: f4222410
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1587.754 ; gain = 87.750
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1589.531 ; gain = 86.922
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 166486342
+Phase 8 Verifying routed nets | Checksum: f4222410
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1589.781 ; gain = 89.777
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1591.023 ; gain = 88.414
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 128d2ef05
+Phase 9 Depositing Routes | Checksum: b8ce2fa4
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1589.781 ; gain = 89.777
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 1591.023 ; gain = 88.414
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=3.437  | TNS=0.000  | WHS=0.163  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=4.020  | TNS=0.000  | WHS=0.161  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 128d2ef05
+Phase 10 Post Router Timing | Checksum: b8ce2fa4
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1589.781 ; gain = 89.777
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 1591.023 ; gain = 88.414
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1589.781 ; gain = 89.777
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 1591.023 ; gain = 88.414
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 84 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:26 . Memory (MB): peak = 1589.781 ; gain = 101.508
+route_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:36 . Memory (MB): peak = 1591.023 ; gain = 100.129
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.289 . Memory (MB): peak = 1599.637 ; gain = 9.855
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.350 . Memory (MB): peak = 1600.863 ; gain = 9.840
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hazel/Desktop/__sutd_term4/50.002 Comp Struct/50.002-ALU/work/vivado/alu_checkoff/alu_checkoff.runs/impl_1/au_top_0_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file au_top_0_drc_routed.rpt -pb au_top_0_drc_routed.pb -rpx au_top_0_drc_routed.rpx
 Command: report_drc -file au_top_0_drc_routed.rpt -pb au_top_0_drc_routed.pb -rpx au_top_0_drc_routed.rpx
@@ -1127,7 +1134,12 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
+WARNING: [DRC PDRC-153] Gated clock check: Net alu_obj/auto/slowClockEdge/E[0] is a gated clock net sourced by a combinational pin alu_obj/auto/slowClockEdge/led_reg[16]_i_2/O, cell alu_obj/auto/slowClockEdge/led_reg[16]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net alu_obj/auto/slowClockEdge/E[1] is a gated clock net sourced by a combinational pin alu_obj/auto/slowClockEdge/led_reg[17]_i_2/O, cell alu_obj/auto/slowClockEdge/led_reg[17]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net alu_obj/led_reg[23]_i_1_n_0 is a gated clock net sourced by a combinational pin alu_obj/led_reg[23]_i_1/O, cell alu_obj/led_reg[23]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net alu_obj/manual/E[0] is a gated clock net sourced by a combinational pin alu_obj/manual/led_reg[0]_i_2/O, cell alu_obj/manual/led_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net alu_obj/manual/E[1] is a gated clock net sourced by a combinational pin alu_obj/manual/led_reg[15]_i_2/O, cell alu_obj/manual/led_reg[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 5 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
 Loading data files...
@@ -1136,18 +1148,18 @@ Loading route data...
 Processing options...
 Creating bitmap...
 Creating bitstream...
-Bitstream compression saved 13963904 bits.
+Bitstream compression saved 12996000 bits.
 Writing bitstream ./au_top_0.bit...
 Writing bitstream ./au_top_0.bin...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-115 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+115 Infos, 7 Warnings, 1 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 2036.711 ; gain = 402.207
-INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 01:24:35 2020...
-[Fri Nov  6 01:24:37 2020] impl_1 finished
-wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:57 . Memory (MB): peak = 1013.250 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 01:24:37 2020...
+write_bitstream: Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 2036.117 ; gain = 403.246
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 16:26:32 2020...
+[Fri Nov  6 16:26:34 2020] impl_1 finished
+wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:27 . Memory (MB): peak = 1012.762 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 16:26:35 2020...
 
 Finished building project.
